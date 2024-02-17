@@ -1,0 +1,55 @@
+.dateTime {
+    position: relative;
+    height: 4.4rem;
+    z-index: 2;
+    border-radius: 100rem;
+    // overflow: hidden;
+    img {
+        width: 2.4rem;
+        height: 2.4rem;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        pointer-events: none;
+        border-radius: unset;
+    }
+}
+
+.dateTimeItem {
+    position: absolute;
+    @include full;
+    border-radius: inherit;
+}
+
+.dateTimeText {
+    position: absolute;
+    @include full;
+    padding: 0 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+    background-color:transparent;
+    z-index: 2;
+    font-size: 1.6rem;
+    color: #64748B;
+
+    &.disable {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.dateTimeInput {
+    padding: 0.8rem 1.4rem;
+    @include reset-input;
+    position: absolute;
+    @include full;
+    z-index: 1;
+    font-size: 1.3rem;
+    @include font-pri;
+    border-radius: inherit;
+    background-color: $color-white;
+}

@@ -1,0 +1,198 @@
+.popup {
+    position: fixed;
+    @include full;
+    z-index: 999;
+    visibility: hidden;
+    pointer-events: none;
+
+    &.open {
+        visibility: visible;
+        pointer-events: visible;
+
+        .popup-overlay {
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+        }
+
+        .popup-main {
+            opacity: 1;
+            visibility: visible;
+            @include transition(.3s, ease-in-out, .1s);
+            @include clip-path(polygon(0 0, 100% 0, 100% 100%, 0% 100%))
+        }
+    }
+
+    &-overlay {
+        position: absolute;
+        background-color: rgba($color: $color-black, $alpha: 0.8);
+        @include full;
+        z-index: 1;
+        @include transitionRe;
+        // opacity: 0;
+        // visibility: hidden;
+    }
+
+    &-main {
+        @include mid;
+        z-index: 2;
+        width: 70rem;
+        max-width: 95%;
+        @include transitionRe;
+        // opacity: 0;
+        // visibility: hidden;
+        @include clip-path(polygon(0 0, 100% 0, 100% 0, 0 0));
+
+        &-wrapper {
+            overflow: hidden;
+            border-radius: 6px;
+            position: relative;
+            padding: 2rem 0;
+            background: white;
+            border-radius: 1rem;
+        }
+    }
+
+    &-over {
+        overflow-y: auto;
+        min-height: 40vh;
+        max-height: 80vh;
+        max-width: calc(100% - 3rem);
+        background-color: $color-white;
+        border-radius: 0.8rem;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    &-wrapper {
+        width: 100%;
+        min-height: 40vh;
+        position: relative;
+        padding: 7rem 2rem 2rem 2rem;
+    }
+
+    &-title {
+        @include fz-24;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1.6rem;
+    }
+
+    &-close {
+        position: absolute;
+        top: 1.6rem;
+        right: 1.6rem;
+        cursor: pointer;
+        transition: 0.6s ease-in-out;
+        width: 3rem;
+        height: 3rem;
+        @include mid-flex;
+        border-radius: 100rem;
+        background-color: var(--color-pri);
+        z-index: 3;
+
+        &:hover {
+            .icon {
+                transform: rotate(360deg);
+            }
+        }
+
+        .icon {
+            color: $color-white;
+            font-weight: 300;
+            font-size: 2.4rem;
+            @include transition(0.6s, ease-in-out);
+        }
+    }
+
+    // 
+    .popSearch {
+        width: 50rem;
+
+        .popup-over {
+            min-height: unset;
+        }
+
+        .popup-wrapper {
+            min-height: unset;
+            padding: 0rem;
+            padding-top: 3rem;
+        }
+
+        .content {
+            &-form {
+                display: flex;
+                border: 0.1rem solid var(--color-pri);
+                padding: 0.5rem;
+                border-radius: 1rem;
+                margin: auto;
+                max-width: 50rem;
+
+                input {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    width: 100%;
+                    padding: 0 2rem;
+                    font-size: 1.6rem;
+                }
+
+                button {
+                    flex-shrink: 0;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+
+    .popWish {
+        .popup-over {
+            min-height: unset;
+        }
+
+        .popup-wrapper {
+            min-height: unset;
+            padding: 2rem;
+            padding-top: 3rem;
+
+            @include max(370px) {
+                padding: 3rem 0rem 0rem 0rem;
+            }
+        }
+
+        .wish {
+            &-form {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                input {
+                    width: 100%;
+                    padding: 1rem;
+                    border: 0.1rem solid var(--color-pri);
+                    border-radius: 1rem;
+                    font-size: 1.6rem;
+                    color: var(--color-pri);
+                }
+            }
+
+            &-bot {
+                display: flex;
+                gap: 1rem;
+            }
+
+            &-tt {
+                font-size: 2.4rem;
+                font-weight: 500;
+                @include font-second;
+            }
+
+            &-note {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+    }
+}

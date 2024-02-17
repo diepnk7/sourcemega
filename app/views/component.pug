@@ -1,0 +1,506 @@
+extends layout/layout
+block vars
+    -title = 'NamePage'
+    -mainClass = 'page-template'
+    -bodyClass = ''
+    -hdClass = ''
+
+block container
+
+    // Start
+    .star
+        .star-list
+            .star-flex.star-empty
+                img.icon(src='./assets/images/star-opa.svg' alt='')
+                img.icon(src='./assets/images/star-opa.svg' alt='')
+                img.icon(src='./assets/images/star-opa.svg' alt='')
+                img.icon(src='./assets/images/star-opa.svg' alt='')
+                img.icon(src='./assets/images/star-opa.svg' alt='')
+            .star-flex.star-filter(style='width: 80%;')
+                img.icon(src='./assets/images/mona.png' alt='')
+                img.icon(src='./assets/images/mona.png' alt='')
+                img.icon(src='./assets/images/mona.png' alt='')
+                img.icon(src='./assets/images/mona.png' alt='')
+                img.icon(src='./assets/images/mona.png' alt='')
+    // End start
+    .star
+        .star-list
+            .star-flex.star-empty
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+            .star-flex.star-filter(style='width: 80%;')
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+    // Burger btn
+    //- .burger
+    //-     #hamburger.hamburger
+    //-         span.line
+    //-         span.line
+    //-         span.line
+    // End  Burger btn
+    // Header search
+    .header-search
+        img.header-search-icon(src='' alt='')
+    .search_mona
+        form#searchform.searchform(method='get' action='')
+            .search-wrap
+                input.search-input(type='search' placeholder='Tìm kiếm . . .')
+                button.search-btn(type='submit')
+                    img.icon(src='' alt='')
+    // End header Search
+    // Header nav
+    //- .header-nav
+    //-     ul.header-nav-list
+    //-         li.header-nav-item.current-menu-item
+    //-             a.header-nav-link(href='')
+    //-                 | Item
+    //-         li.header-nav-item.dropdown
+    //-             a.header-nav-link(href='')
+    //-                 | Item
+    //-         li.header-nav-item
+    //-             a.header-nav-link(href='')
+    //-                 | Item
+    // End Header nav
+    //- .mobile-overlay
+    //- .mobile
+    //-     .mobile-con
+    //-         .mobile-wr
+    //-             .mobile-nav
+    //-                 .menu-nav
+    //-                     ul.menu-list
+    //-                         li.menu-item
+    //-                             a.menu-link(href='')
+    //-                                 | Demo
+    //-                         li.menu-item
+    //-                             a.menu-link(href='')
+    //-                                 | Demo
+    //-                         li.menu-item.dropdown
+    //-                             a.menu-link(href='')
+    //-                                 | Demo
+    //-                             ul.menu-list
+    //-                                 li.menu-item
+    //-                                     a.menu-link(href='')
+    //-                                         | DemoSp
+    //-                                 li.menu-item
+    //-                                     a.menu-link(href='')
+    //-                                         | DemoSp
+    //-                         li.menu-item
+    //-                             a.menu-link(href='')
+    //-                                 | Demo
+    //-             .mobile-content
+    //-                 .mobile-fl.mb-8s
+    //-                     p.mobile-text.mobile-link
+    //-                         | &Auml;&#x90;&aacute;&raquo;&lsaquo;a ch&aacute;&raquo;&permil;: 133/42 &Auml;&#x90;&AElig;&deg;&aacute;&raquo;&#x9D;ng s&aacute;&raquo;&lsquo; 8, Ph&AElig;&deg;&aacute;&raquo;&#x9D;ng 11, Qu&aacute;&ordm;&shy;n G&Atilde;&sup2; V&aacute;&ordm;&yen;p, TP HCM
+    //-                     br
+    //-                     p.mobile-text.mobile-link
+    //-                         | Kho h&Atilde; ng: 1107 &Auml;&#x90;&AElig;&deg;&aacute;&raquo;&#x9D;ng Tr&aacute;&ordm;&sect;n Ph&Atilde;&ordm;, Ph&AElig;&deg;&aacute;&raquo;&#x9D;ng L&aacute;&raquo;&trade;c Ti&aacute;&ordm;&iquest;n, TP B&aacute;&ordm;&pound;o L&aacute;&raquo;&trade;c, L&Atilde;&cent;m &Auml;&#x90;&aacute;&raquo;&ldquo;ng
+    //-                 .mobile-fl.mb-8s
+    //-                     span.title
+    //-                         | T&aacute;&raquo;&bull;ng &Auml;&#x90;&Atilde; i:
+    //-                     a.mobile-text.mobile-link(href='')
+    //-                         | 0867 920 925
+    //-     .mobile-mxh
+    //-         a.mobile-mxh-link(href='')
+    //-             img(src='./assets/images/social-icon-1.png' alt='')
+    //-         a.mobile-mxh-link(href='')
+    //-             img(src='./assets/images/social-icon-2.png' alt='')
+    //-         a.mobile-mxh-link(href='')
+    //-             img(src='./assets/images/social-icon-3.png' alt='')
+    //-         a.mobile-mxh-link(href='')
+    //-             img(src='./assets/images/social-icon-4.png' alt='')
+    // Side
+    .side-fixed
+        .side-fixed-wrap
+            // Content here
+        .side-close
+            i.fas.fa-times.close.icon
+    .side-open
+        .side-open-wrap
+            i.fas.fa-angle-left.icon
+    .side-overlay
+    // End Side
+    // Select custom
+    .sl-cus
+        .sl-head
+            input.select-input(type='text' hidden='')
+            p.sl-main
+        ul.sl-list
+            li.sl-item.active(data-name='Option 1' data-slug='value 1')
+            li.sl-item(data-name='Option 1' data-slug='value 2')
+    // End Select custom
+    // Header User
+    .user
+        .user-ava
+            img(src='' alt='')
+        p.user-name
+            | John Blue
+        .user-menu
+            a.link(href='') my profile
+            a.link(href='') Customer support
+            a.link(href='') Shop Experiences
+            a.link(href='') Order history
+    // End header User
+    // Pagi
+    ul.page-numbers
+        li
+            a.prev.page-numbers(href='')
+                i.fas.fa-chevron-double-left.icon
+        li
+            span.page-numbers.current 1
+        li
+            a.page-numbers(href='') 2
+        li
+            a.page-numbers(href='') 3
+        li
+            a.page-numbers(href='') ...
+        li
+            a.page-numbers(href='') 10
+        li
+            a.next.page-numbers(href='')
+                i.fas.fa-chevron-double-right.icon
+    // End pagi
+    // Recheck
+    .recheck-block
+        .recheck-item
+            input.recheck-input(type='checkbox' name='' id='' hidden='')
+            .recheck-dot
+            p.recheck-text
+                | Check me ........
+    // End Recheck
+    // Mxh
+    .mxh
+        .mxh-list
+            a.mxh-link(href='')
+                img.icon(src='' alt='')
+            a.mxh-link(href='')
+                img.icon(src='' alt='')
+            a.mxh-link(href='')
+                img.icon(src='' alt='')
+    // End mxh
+    // Count
+    .count
+        .count-btn.count-minus
+            i.fas.fa-minus.icon
+        input.count-input(type='text' value='1' max='12' min='0' hidden='')
+        p.count-number
+        .count-btn.count-plus
+            i.fas.fa-plus.icon
+    // End cout
+    // Cart mini
+    .header-cart
+        img.header-cart-icon(src='./assets/images/header-cart-icon.svg' alt='')
+        .cmini
+            .cmini-wrap
+                .cmini-list
+                    a.cmini-item(href='')
+                        .cmini-img
+                            img(src='./assets/images/cmini-img.png' alt='')
+                            .cmini-delete
+                                i.fas.fa-times.icon
+                        .cmini-content
+                            h3.cart-name Roger Roger Roger
+                            p.cart-price 180,000,000 &Auml;&lsquo;
+                            .cmini-color(style='background-color: #D0CBCD;')
+                    a.cmini-item(href='')
+                        .cmini-img
+                            img(src='./assets/images/cmini-img.png' alt='')
+                            .cmini-delete
+                                i.fas.fa-times.icon
+                        .cmini-content
+                            h3.cart-name Roger
+                            p.cart-price 180,000,000 &Auml;&lsquo;
+                            .cmini-color(style='background-color: #D0CBCD;')
+                    a.cmini-item(href='')
+                        .cmini-img
+                            img(src='./assets/images/cmini-img.png' alt='')
+                            .cmini-delete
+                                i.fas.fa-times.icon
+                        .cmini-content
+                            h3.cart-name Roger
+                            p.cart-price 180,000,000 &Auml;&lsquo;
+                            .cmini-color(style='background-color: #D0CBCD;')
+            .cmini-button
+                a.button.button-nor.button-full(href='')
+                    p.button-text
+                        | Vào trang giỏ hàng
+    // End cart mini
+    .popup.open
+        .popup-overlay
+        .popup-main
+            .popup-main-wrapper
+                .popup-over
+                    .popup-wrapper
+                        // Content hear
+            .popup-close
+                i.fas.fa-times.icon
+    .header-burger
+        #hamburger.hamburger
+            label.hamburger-label(for='menu_checkbox')
+                .hamburger-text
+    .dateTime(data-type='single')
+        .dateTimeItem
+            input.dateTimeInput(type='text')
+            .dateTimeText
+                | Date travel
+        img(src='./assets/images/icon-calenda.svg' alt='')
+    // 
+    // CÃ¢Ìu truÌc phÃ¢n trang
+    ul.page-numbers
+        li
+            a.prev.page-numbers(href='')
+                i.fa.fa-angle-left
+        li
+            span.page-numbers.current 1
+        li
+            a.page-numbers(href='') 2
+        li
+            a.page-numbers(href='') 3
+        li
+            span.page-numbers.dot ...
+        li
+            a.page-numbers(href='') 8
+        li
+            a.page-numbers(href='') 9
+        li
+            a.page-numbers(href='') 10
+        li
+            a.next.page-numbers(href='')
+                i.fa.fa-angle-right
+    // 
+    .select-box
+        .select-current
+            span.text-current All category
+            span.arrow
+                img(src='http://grand-ceramics.monamedia.net/template/img/icon-drop.svg' alt='')
+        .select-options
+            .opt
+                label.opt-label
+                    input.opt-input(type='radio' name='city' id='' value='Milk tea')
+                    span.opt-text
+                        span.icon
+                            img(src='./assets/images/ic-ts1.svg' alt='')
+                        span.text
+                            | Milk tea
+            .opt
+                label.opt-label
+                    input.opt-input(type='radio' name='city' id='' checked='' value='Smoothies')
+                    span.opt-text
+                        span.icon
+                            img(src='./assets/images/ic-ts2.svg' alt='')
+                        span.text
+                            | Smoothies
+            .opt
+                label.opt-label
+                    input.opt-input(type='radio' name='city' id='' value='Tea')
+                    span.opt-text
+                        span.icon
+                            img(src='./assets/images/ic-ts3.svg' alt='')
+                        span.text
+                            | Tea
+            .opt
+                label.opt-label
+                    input.opt-input(type='radio' name='city' id='' value='Bingsu')
+                    span.opt-text
+                        span.icon
+                            img(src='./assets/images/ic-ts4.svg' alt='')
+                        span.text
+                            | Bingsu
+            .opt
+                label.opt-label
+                    input.opt-input(type='radio' name='city' id='' value='Ice cream')
+                    span.opt-text
+                        span.icon
+                            img(src='./assets/images/ic-ts5.svg' alt='')
+                        span.text
+                            | Ice scream
+            .opt
+                label.opt-label
+                    input.opt-input(type='radio' name='city' id='' value='Taiwanese')
+                    span.opt-text
+                        span.icon
+                            img(src='./assets/images/ic-ts6.svg' alt='')
+                        span.text
+                            | Taiwanese
+    .swiper-control
+        .swiper-control-btn.swiper-prev
+            img(src='./assets/images/chev-l.svg' alt='')
+        .swiper-control-btn.swiper-next
+            img(src='./assets/images/chev-r.svg' alt='')
+    .swiper-control.posi.midle
+        .swiper-control-btn.swiper-prev
+            img(src='./assets/images/chev-l.svg' alt='')
+        .swiper-control-btn.swiper-next
+            img(src='./assets/images/arrR.svg' alt='')
+    .swiper-control.posi.plus
+        .swiper-control-btn.swiper-prev
+            img(src='./assets/images/chev-l.svg' alt='')
+        .swiper-control-btn.swiper-next
+            img(src='./assets/images/arrR.svg' alt='')
+    .swiper-control.posi.minus
+        .swiper-control-btn.swiper-prev
+            img(src='./assets/images/chev-l.svg' alt='')
+        .swiper-control-btn.swiper-next
+            img(src='./assets/images/arrR.svg' alt='')
+    //- .header-lg
+    //-     .header-lg-it
+    //-         span.ic
+    //-             img(src='./assets/images/vn.svg' alt='')
+    //-         span.txt
+    //-             | VN
+    //-     .header-lg-drop
+    //-         a.header-lg-it(href='')
+    //-             span.ic
+    //-                 img(src='./assets/images/vn.svg' alt='')
+    //-             span.txt
+    //-                 | VN
+    //-         a.header-lg-it(href='')
+    //-             span.ic
+    //-                 img(src='./assets/images/vn.svg' alt='')
+    //-             span.txt
+    //-                 | VN
+    .news-cmt
+        .cmt.load-container
+            ul.cmt-list
+                li.cmt-item
+                    .cmt-item-wrap
+                        .cmt-ava
+                            .cmt-ava-inner
+                                img(src='./assets/images/user-ava-second.png' alt='')
+                        .cmt-content
+                            .cmt-content-wrap
+                                .cmt-info
+                                    .cmt-head
+                                        p.cmt-name
+                                            | Trần Văn A
+                                        .star
+                                            .star-list
+                                                .star-flex.star-empty
+                                                    img.icon(src='./assets/images/star-opa.png' alt='')
+                                                    img.icon(src='./assets/images/star-opa.png' alt='')
+                                                    img.icon(src='./assets/images/star-opa.png' alt='')
+                                                    img.icon(src='./assets/images/star-opa.png' alt='')
+                                                    img.icon(src='./assets/images/star-opa.png' alt='')
+                                                .star-flex.star-filter(style='width: 80%;')
+                                                    img.icon(src='./assets/images/star.png' alt='')
+                                                    img.icon(src='./assets/images/star.png' alt='')
+                                                    img.icon(src='./assets/images/star.png' alt='')
+                                                    img.icon(src='./assets/images/star.png' alt='')
+                                                    img.icon(src='./assets/images/star.png' alt='')
+                                    p.cmt-time
+                                        | 24/09/2022
+                                p.cmt-des
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    | Etiam maecenas id justo feugiat lectus sodales nec et,
+                                    | quis. Gravida lacinia tristique aliquam nulla. Amet
+                                    | vitae, lacus, pharetra at lectus aliquam in enim,
+                                .cmt-image.gallery
+                                    .cmt-image-list
+                                        .cmt-image-item
+                                            .cmt-image-img.gItem(data-src='./assets/images/pro-img-15.jpg')
+                                                img(src='./assets/images/pro-img-15.jpg' alt='')
+                                        .cmt-image-item
+                                            .cmt-image-img.gItem(data-src='./assets/images/pro-img-14.jpg')
+                                                img(src='./assets/images/pro-img-14.jpg' alt='')
+                                        .cmt-image-item
+                                            .cmt-image-img.gItem(data-src='./assets/images/pro-img-12.jpg')
+                                                img(src='./assets/images/pro-img-12.jpg' alt='')
+                                        .cmt-image-item
+                                            .cmt-image-img.gItem(data-src='./assets/images/pro-img-13.jpg')
+                                                img(src='./assets/images/pro-img-13.jpg' alt='')
+                                        .cmt-image-item
+                                            .cmt-image-img.gItem(data-src='./assets/images/pro-img-14.jpg')
+                                                img(src='./assets/images/pro-img-14.jpg' alt='')
+                                        .cmt-image-item
+                                            .cmt-image-img.gItem(data-src='./assets/images/pro-img-15.jpg')
+                                                img(src='./assets/images/pro-img-15.jpg' alt='')
+                                        .cmt-image-item
+                                            .cmt-image-img.gItem(data-src='./assets/images/pro-img-16.jpg')
+                                                img(src='./assets/images/pro-img-16.jpg' alt='')
+                                .cmt-bot
+                                    .cmt-control
+                                        a.cmt-control-link(href='')
+                                            | Thích (
+                                            span 1
+                                            | )
+                                        a.cmt-control-link.cmt-control-answer(href='')
+                                            | Trả lời (
+                                            span 1
+                                            | )
+                                    .re-form
+                                        form(action='')
+                                            .re-form-wrap
+                                                input(type='text' placeholder='Bình luận')
+                                                button.re-form-btn(type='submit')
+                                                    img(src='./assets/images/icon-send.png' alt='')
+                    ul.children
+                        li.cmt-item.load-item(style='display: list-item;')
+                            .cmt-item-wrap
+                                .cmt-ava
+                                    .cmt-ava-inner
+                                        img(src='./assets/images/user-ava-second.png' alt='')
+                                .cmt-content
+                                    .cmt-content-wrap
+                                        .cmt-info
+                                            .cmt-head
+                                                p.cmt-name
+                                                    | Trần Văn A
+                                                .star
+                                                    .star-list
+                                                        .star-flex.star-empty
+                                                            img.icon(src='./assets/images/star-opa.png' alt='')
+                                                            img.icon(src='./assets/images/star-opa.png' alt='')
+                                                            img.icon(src='./assets/images/star-opa.png' alt='')
+                                                            img.icon(src='./assets/images/star-opa.png' alt='')
+                                                            img.icon(src='./assets/images/star-opa.png' alt='')
+                                                        .star-flex.star-filter(style='width: 80%;')
+                                                            img.icon(src='./assets/images/star.png' alt='')
+                                                            img.icon(src='./assets/images/star.png' alt='')
+                                                            img.icon(src='./assets/images/star.png' alt='')
+                                                            img.icon(src='./assets/images/star.png' alt='')
+                                                            img.icon(src='./assets/images/star.png' alt='')
+                                            p.cmt-time
+                                                | 24/09/2022
+                                        p.cmt-des
+                                            | Lorem ipsum dolor sit amet, consectetur
+                                            | adipiscing elit. Etiam maecenas id justo feugiat
+                                            | lectus sodales nec et, quis. Gravida lacinia
+                                            | tristique aliquam nulla. Amet vitae, lacus,
+                                            | pharetra at lectus aliquam in enim,
+                                        .cmt-bot
+                                            .cmt-control
+                                                a.cmt-control-link(href='')
+                                                    | Thích (
+                                                    span 1
+                                                    | )
+                                                a.cmt-control-link.cmt-control-answer(href='')
+                                                    | Trả lời (
+                                                    span 1
+                                                    | )
+                                            .re-form
+                                                form(action='')
+                                                    .re-form-wrap
+                                                        input(type='text' placeholder='Bình luận')
+                                                        button.re-form-btn(type='submit')
+                                                            img(src='./assets/images/icon-send.png' alt='')
+    .rating
+        label.stars
+            input.star-item(type='radio' name='name' hidden='')
+            i.fa-regular.fa-star
+        label.stars
+            input.star-item(type='radio' name='name' hidden='')
+            i.fa-regular.fa-star
+        label.stars
+            input.star-item(type='radio' name='name' hidden='')
+            i.fa-regular.fa-star
+        label.stars
+            input.star-item(type='radio' name='name' hidden='')
+            i.fa-regular.fa-star
+        label.stars
+            input.star-item(type='radio' name='name' hidden='')
+            i.fa-regular.fa-star

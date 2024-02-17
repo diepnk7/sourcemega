@@ -1,0 +1,223 @@
+.hd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.4s;
+    z-index: 50;
+    height: var(--size-hd);
+    background: white;
+    box-shadow: var(--sdow);
+    @include max(1200px) {
+        background: white;
+
+        .hd-logo {
+            .custom-logo-link {
+                width: 10rem;
+            }
+        }
+    }
+
+    &.sticky {
+        @include min(1201px) {
+            --size-hd: 6rem;
+            background: white;
+
+            .hd-logo {
+                .custom-logo-link {
+                    width: 10rem;
+                }
+            }
+        }
+    }
+
+    &-wr {
+        height: 100%;
+    }
+
+    &-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        max-width: 123rem;
+        margin: auto;
+        position: relative;
+        padding: 0 1.5rem;
+    }
+
+    &-nav {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+
+        @include max(1200px) {
+            display: none;
+        }
+
+        .menu-nav {
+            height: 100%;
+
+            .menu-list {
+                // justify-content: space-between;
+            }
+        }
+    }
+
+    &-logo {
+        .custom-logo-link {
+            display: flex;
+            @include transitionRe;
+            width: 17.6rem;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &-act {
+        --gap: 4rem;
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+        height: 100%;
+    }
+
+    &-lg {
+        display: flex;
+        gap: 0.8rem;
+        @include max(1200px) {
+            margin-left: auto;
+            border: 0.1rem solid var(--color-pri);
+            padding: 0.6rem;
+            border-radius: 0.4rem;
+            background: var(--color-pri);
+        }
+        &-it {
+            color: #A9A9A9;
+            transition: 0.4s;
+            position: relative;
+            @include max(1200px) {
+                color: white;
+            }
+            &::after {
+                @include pseudo;
+                width: 0%;
+                height: 0.1rem;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background: black;
+                transition: 0.4s;
+                @include max(1200px) {
+                    background: white;
+                }
+            }
+
+            &.active {
+                color: var(--color-text);
+                @include max(1200px) {
+                    color: white;
+                }
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            @include hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &-srch {
+        display: block;
+        position: relative;
+        height: 100%;
+        @include max(1200px) {
+            margin-left: auto;
+            display: none;
+        }
+        &-it {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            gap: 0.8rem;
+            cursor: pointer;
+
+            img {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+
+        &-ip {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: 0.4s;
+            top: 50%;
+            transform: translateY(-50%);
+            clip-path: inset(0 0 0 100%);
+            
+            &.open {
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+        &-flex {
+            display: flex;
+            align-items: center;
+            height: 4rem;
+            min-width: 20rem;
+            border: 0.1rem solid $color-border-01;
+            padding: 0.5rem;
+            border-radius: 0.4rem;
+            background: white;
+
+            input {
+                width: 100%;
+                border: none;
+                outline: none;
+            }
+
+            button {
+                width: 3rem;
+                height: 3rem;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--color-pri);
+                border-radius: inherit;
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    filter: brightness(0) invert(1);
+                }
+            }
+            
+        }
+    }
+
+    .burger {
+        width: 4rem;
+        height: 4rem;
+        background: var(--color-pri);
+        border-radius: 0.4rem;
+        margin-left: 1rem;
+        @include max(1200px) {
+            order: -1;
+            margin-left: 0;
+        }
+
+        @include min($res-mobile-min) {
+            display: none;
+        }
+    }
+}

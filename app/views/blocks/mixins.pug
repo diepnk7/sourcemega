@@ -1,0 +1,201 @@
+mixin btn(text, type, classCustom, img)
+    if(!img=="")
+      if(type == "button")
+              button.btn(type="submit",class=classCustom)
+                  span.txt
+                    span.txt-inner #{text}
+                    +img(img)
+      else
+          a.btn(href="",class=classCustom)
+              span.txt
+                span.txt-inner #{text} 
+                +img(img) 
+    else 
+      if(!classCustom)
+          if(type == "button")
+              button.btn(type="submit",class=classCustom)
+                  span.txt
+                    span.txt-inner #{text}
+                    +img("arrow.svg")
+          else
+              a.btn(href="",class=classCustom)
+                  span.txt
+                    span.txt-inner #{text} 
+                    +img("arrow.svg")
+      else 
+          if(type == "button")
+              button.btn(type="submit",class=classCustom)
+                  span.txt #{text}
+          else
+              a.btn(href="", class=classCustom)
+                  span.txt #{text}
+mixin PageNumber 
+    ul.page-numbers
+        li 
+            a.prev.page-numbers(href="")
+                i.fa.fa-angle-left
+        li
+            span.page-numbers.current   
+                | 1
+        li
+            a.page-numbers(href="")   
+                | 2
+        li 
+            span.page-numbers.dot 
+                |...
+        li
+            a.page-numbers(href="")   
+                | 10
+        li 
+            a.next.page-numbers(href="")
+                i.fa.fa-angle-right
+mixin breadCrumb(arr)
+  .breadcrumb
+    .container
+      .breadcrumb-wrapper 
+        ul.breadcrumb-list
+          li.breadcrumb-item(data-aos="fade-right")
+            a.breadcrumb-link(href="")
+              | Trang chủ
+          each arrs in arr
+            li.breadcrumb-item(data-aos="fade-right")
+              a.breadcrumb-link(href="") #{arrs.txt}
+mixin pagination(classCustom)
+    .swiper-pagination(class=classCustom)
+mixin CountDown(time,customClass)
+    .cdw(data-time= time, class= customClass)
+      .cdw-list 
+          .cdw-item(style="display: none")
+              .cdw-inner 
+                  .number.date
+          .cdw-item 
+              .cdw-inner 
+                  .number.hour
+          span.txt :
+          .cdw-item 
+              .cdw-inner 
+                  .number.minute
+          span.txt :
+          .cdw-item 
+              .cdw-inner 
+                  .number.second
+mixin SwiperControl(customClass)
+    .swiper-control(class= customClass) 
+      .swiper-control-btn.swiper-prev 
+          i.far.fa-long-arrow-left
+      .swiper-control-btn.swiper-next 
+          i.far.fa-long-arrow-right
+mixin Count()
+    .count 
+        .count-btn.count-minus 
+            i.fas.fa-minus.icon
+        input(type="text", class="count-input", max="999", min="0", value="1", hidden)
+        p.count-number 
+        .count-btn.count-plus 
+            i.fas.fa-plus.icon
+mixin img(name)
+  img(src="./assets/images/" + name, alt="")
+mixin star(per)
+  .star
+    .star-list
+      .star-flex.star-empty
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+      .star-flex.star-filter(style="width:"+per)
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star        
+mixin Rate()
+  .rating
+      label.stars
+        input.star-item(type='radio', name='name', hidden='')
+        i.fa-regular.fa-star
+      label.stars
+        input.star-item(type='radio', name='name', hidden='')
+        i.fa-regular.fa-star
+      label.stars
+        input.star-item(type='radio', name='name', hidden='')
+        i.fa-regular.fa-star
+      label.stars
+        input.star-item(type='radio', name='name', hidden='')
+        i.fa-regular.fa-star
+      label.stars
+        input.star-item(type='radio', name='name', hidden='')
+        i.fa-regular.fa-star
+//- posi - (plus,midle,minus)
+mixin navigation(classCustom)
+  .swiper-control(class=classCustom)
+    .swiper-control-btn.swiper-prev
+      i.fa-solid.fa-chevron-left
+    .swiper-control-btn.swiper-next
+      i.fa-solid.fa-chevron-right
+//- popup
+mixin popup(classCustom=classCustom, dataId=dataId)
+  .popup(data-popup-id=dataId)
+    .popup-overlay
+    .popup-main(class=classCustom)
+      .popup-main-wrapper
+        .popup-over
+          .popup-wrapper
+            block
+      .popup-close
+        i.fas.fa-times.icon
+//- titles
+mixin titles(tt,bc)
+  .titles.add-class 
+    .bg 
+      +img("backsmall.jpg")
+    .titles-wr
+      h1.tt(data-spl) #{tt}
+      +breadCrumb(bc)
+//- see detail
+mixin seeDetail(txt,classCustom)
+  a(href="").seeDetail 
+    span.txt= txt 
+    i.fa-solid.fa-circle-arrow-right
+//- swiper
+mixin swiper(row,col,classCustom) 
+  .swiper-container(class=row)
+    .swiper 
+      .swiper-wrapper 
+        block
+//- title-pri
+mixin ttb(text)
+  .title 
+    h1.title-big(class=classCustom,data-aos=ani) #{text}
+mixin ttp(text,ani,classCustom)
+  .title
+    h2.title-pri(class=classCustom,data-aos=ani) #{text}
+//- title-second
+mixin tts(text,sub,ani,classCustom)
+  .title
+    h2.title-second(class=classCustom,data-aos=ani) #{text}
+    p.title-sub(data-aos=ani,data-aos-delay="500") #{sub}
+//- banner
+mixin banner(text,breadcrumb,img)
+  .banner 
+    .bg 
+      +img(img)
+    .banner-wr 
+      .container 
+        .banner-ctn 
+          +ttp(text,"fade-left","t-white")
+          +breadCrumb(breadcrumb)
+//- item 
+mixin prodItem(img,tt,des)
+  .prod-item 
+    .inner 
+      .img 
+        a(href="").img-inner
+          +img(img) 
+      .info 
+        h3 
+          a(href="").info-flex 
+            span.info-tt #{tt} 
+            i.fa-regular.fa-arrow-up-right
+        p.info-des #{des} 

@@ -1,0 +1,65 @@
+footer.ft 
+    .ft-wr 
+        .container 
+            .ft-flex.row
+                .ft-item.col
+                    .wrapper 
+                        .ft-logo 
+                            a.custom-logo-link(href="")
+                                +img("logo.png") 
+                        .ft-social 
+                            .social 
+                                a.social-link(href="")
+                                    +img("ic-fb.svg") 
+                                a.social-link(href="")
+                                    +img("ic-linked.svg") 
+                                a.social-link(href="")
+                                    +img("ic-twi.svg") 
+                                a.social-link(href="")
+                                    +img("ic-tiktok.svg") 
+                        .ft-hotline 
+                            p.text Hotline
+                            a.link(href="")  4-956-232-0955
+                .ft-item.col
+                    .wrapper 
+                        p.tt Giới thiệu
+                        ul.menu-list
+                            -
+                                var arrs = [
+                                    "Câu chuyện Mega Sun",
+                                    "Tầm nhìn & Sứ mệnh",
+                                    "Lịch sử phát triển",
+                                ]
+                            each val in arrs 
+                                li.menu-item 
+                                    a(href="").menu-link #{val}  
+                .ft-item.col
+                    .wrapper 
+                        p.tt Dịch vụ
+                        ul.menu-list
+                            -
+                                var arrs = [
+                                    "Tư vấn & thiết kế",
+                                    "Sản xuất & chế tạo",
+                                    "Thi công & lắp đặtt",
+                                    "Bảo trì & bảo dưỡng",
+                                    "Gia công theo đặt hàng",
+                                    "Nhập khẩu & phân phối",
+                                ]
+                            each val in arrs 
+                                li.menu-item 
+                                    a(href="").menu-link #{val}
+                .ft-item.col
+                    .wrapper 
+                        p.tt Hỗ trợ
+                        ul.menu-list
+                            -
+                                var arrs = [
+                                    "Liên hệ",
+                                    "Đặt hàng",
+                                    "Thanh toán",
+                                ]
+                            each val in arrs 
+                                li.menu-item 
+                                    a(href="").menu-link #{val}
+            

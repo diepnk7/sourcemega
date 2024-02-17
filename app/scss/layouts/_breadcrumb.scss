@@ -1,0 +1,48 @@
+.breadcrumb {
+    padding: 1.2rem 0;
+
+    &-wrapper {
+        @include min($res-mobile) {
+            width: fit-content;
+        }
+    }
+
+    &-list {
+        @include flex;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        gap: .8rem;
+    }
+
+    &-item {
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        font-weight: 400;
+        color: var(--color-pri);
+        &:not(:first-child) {
+            &::before {
+                display: inline-block;
+                content: '/';
+                border-radius: 100rem;
+                vertical-align: middle;
+            }
+        }
+
+        &:last-child {
+            color: var(--color-pri);
+            pointer-events: none;
+        }
+
+        @include hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-link {
+        color: inherit;
+        transition: .2s ease-in-out;
+    }
+}

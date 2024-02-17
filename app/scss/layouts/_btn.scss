@@ -1,0 +1,231 @@
+.btn {
+    @include mid-flex;
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-weight: 500;
+    @include font-pri;
+    @include transition(0.5s, ease);
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    gap: 1rem;
+    color: $color-white;
+    font-size: 1.6rem;
+    height: 4rem;
+    // border-radius: 100rem;
+    background-color: white;
+    border: 0.1rem solid var(--color-pri);
+
+    >* {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::after {
+        @include pseudo;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: var(--color-pri);
+        transform: scaleY(0);
+        transform-origin: bottom right;
+        transition: transform 0.5s ease;
+    }
+
+    .txt {
+        position: relative;
+        display: grid;
+        place-items: center;
+        height: 100%;
+        padding: 1.6rem 3.2rem;
+        transition: 0.4s;
+        @include flex;
+        justify-content: center;
+        gap: 1rem;
+        color: var(--color-pri);
+    }
+    img {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    @include hover {
+        .txt {
+            color: white;
+        }
+        img {
+            filter: brightness(0) invert(1);
+        }
+        &::after {
+            transform-origin: top right;
+            transform: scaleY(1);
+        }
+        
+    }
+
+    &.black {
+        background-color: black;
+
+        .txt {
+            color: white
+        }
+
+        @include hover {
+            .txt {
+                color: $color-white
+            }
+        }
+    }
+
+    &.white {
+        background-color: white;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+        border: 0.1rem solid var(--color-pri);
+
+        .txt {
+            color: var(--color-second);
+        }
+
+        &::after {
+            background: var(--color-pri);
+        }
+
+        @include hover {
+            border-color: white;
+
+            .txt {
+                color: $color-white
+            }
+        }
+    }
+
+    &.orange {
+        background-color: #F29F24;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+
+        .txt {
+            color: white;
+        }
+
+        &::after {
+            background: var(--color-pri);
+        }
+
+        @include hover {
+            .txt {
+                color: $color-white
+            }
+        }
+    }
+
+    &.trans {
+        background-color: transparent;
+        border: 0.1rem solid var(--color-pri);
+
+        .txt {
+            color: black;
+        }
+
+        img {
+            filter: brightness(1) invert(1);
+        }
+
+        &::after {
+            background: var(--color-pri);
+        }
+
+        @include hover {
+            border-color: white;
+
+            .txt {
+                color: $color-white
+            }
+
+            img {
+                filter: none;
+            }
+        }
+    }
+
+    &.transpur {
+        background-color: transparent;
+        border: 0.1rem solid var(--color-second);
+
+        .txt {
+            color: var(--color-second);
+        }
+
+        img {
+            filter: brightness(1) invert(1);
+        }
+
+        &::after {
+            background: var(--color-second);
+        }
+
+        @include hover {
+            .txt {
+                color: $color-white
+            }
+
+            img {
+                filter: none;
+            }
+        }
+    }
+
+    &.second {
+        background-color: var(--color-pri);
+
+        .txt {
+            color: white;
+        }
+
+        &::after {
+            background-color: white;
+        }
+
+        @include hover {
+            .txt {
+                color: var(--color-pri)
+            }
+        }
+    }
+    &.third {
+        background-color: var(--color-pri);
+        border: 0.1rem solid white;
+        .txt {
+            color: white;
+        }
+
+        &::after {
+            background-color: white;
+        }
+
+        @include hover {
+            .txt {
+                color: var(--color-pri)
+            }
+        }
+    }
+
+    &-gr {
+        @include flex-wr;
+        gap: 1rem;
+    }
+}
+
+.seeDetail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    transition: 0.4s;
+
+    @include hover {
+        color: var(--color-second);
+    }
+}

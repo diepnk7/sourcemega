@@ -1,0 +1,44 @@
+extends layout/layout
+
+block vars
+    -title = 'NamePage'
+    -mainClass = 'page-template'
+    -bodyClass = ''
+    -hdClass = ''
+
+block container 
+    +popup("popSearch","srch")
+        .content 
+            form(action="")
+                .content-form 
+                    input(type="text", placeholder="Tìm kiếm")
+                    +btn("Tìm kiếm","button","second")
+    +banner("Sản phẩm dân dụng",[{txt:"Sản phẩm dân dụng"}],"banner.jpg")
+    .head.t-center
+        +tts("SẢN PHẨM DÂN DỤNG","Sản phẩm của công ty gồm: máy nước nóng năng lượng mặt trời, điện năng lượng mặt trời, bơm nhiệt, bồn bảo ôn, bồn nước inox,.. và các thiết bị & phụ kiện hỗ trợ khác.")
+    a.text(href="") Xem tất cả sản phẩm
+    .container
+        .ss-pd 
+            .prod-list.row 
+                -
+                    var arrs = [
+                        {
+                            img:"pr1.jpg",
+                            tt:"Máy nước nóng ống chân không thu nhiệt",
+                            des:"Sản phẩm đã đạt chứng nhận phù hợp tiêu chuẩn Châu Âu (CE mark) đủ tiêu chuẩn xuất khẩu vào thị trường liên minh Châu ",
+                        },
+                        {
+                            img:"pr2.jpg",
+                            tt:"Máy nước nóng ống chân không thu nhiệt",
+                            des:"Sản phẩm đã đạt chứng nhận phù hợp tiêu chuẩn Châu Âu (CE mark) đủ tiêu chuẩn xuất khẩu vào thị trường liên minh Châu ",
+                        },
+                        {
+                            img:"pr3.jpg",
+                            tt:"Máy nước nóng ống chân không thu nhiệt",
+                            des:"Sản phẩm đã đạt chứng nhận phù hợp tiêu chuẩn Châu Âu (CE mark) đủ tiêu chuẩn xuất khẩu vào thị trường liên minh Châu ",
+                        },
+                    ]
+                each val in arrs 
+                    .col.col-4 
+                        +prodItem(val.img,val.tt,val.des) 
+            +PageNumber

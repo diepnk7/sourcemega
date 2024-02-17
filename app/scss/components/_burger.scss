@@ -1,0 +1,82 @@
+.hd-burger {
+    padding: 1rem 0;
+
+    &.active .line:nth-child(1) {
+        -webkit-transform: translate3d(0, .3rem, 0) rotate(45deg) !important;
+        transform: translate3d(0, .3rem, 0) rotate(45deg) !important;
+    }
+
+    &.active .line:nth-child(2) {
+        -webkit-transform: translate3d(0, -.4rem, 0) rotate(135deg) !important;
+        transform: translate3d(0, -.4rem, 0) rotate(135deg) !important;
+        width: 2.4rem;
+    }
+
+    cursor: pointer;
+}
+
+.burger {
+    position: relative;
+}
+
+.hamburger .line {
+    width: 2.4rem;
+    height: 0.2rem;
+    border-radius: .4rem;
+    background: $color-pri-ln;
+    display: block;
+    margin: 0.5rem 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+
+    &:nth-child(2) {
+        width: 1.8rem;
+        margin-left: auto;
+    }
+}
+.hamburger {
+    &.active {
+        .ham {
+            @include transform(rotate(45deg));
+
+            .top {
+                stroke-dashoffset: -98px;
+            }
+
+            .bottom {
+                stroke-dashoffset: -138px;
+            }
+        }
+    }
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+    .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: $color-white;
+        stroke-width: 5.5;
+        stroke-linecap: round;
+    }
+
+    .top {
+        stroke-dasharray: 40 140;
+    }
+
+    .bottom {
+        stroke-dasharray: 40 180;
+    }
+}
