@@ -405,22 +405,24 @@
     }
 }
 
-// @mixin scroll-bar($size-w: 0.5rem, $size-h, $br: #f1f1f1, $line: #000) {
-//     &::-webkit-scrollbar {
-//         width: $size-w;
-//         height: $size-h;
-//     }
+@mixin scroll-bar($size-w: 0.5rem, $size-h: 0.5rem, $br: #f1f1f1, $line: $color-pri) {
+    padding-bottom: .5rem;
 
-//     /* Track */
-//     &::-webkit-scrollbar-track {
-//         background: $br;
-//     }
+    &::-webkit-scrollbar {
+        width: $size-w;
+        height: $size-h;
+    }
 
-//     /* Handle */
-//     &::-webkit-scrollbar-thumb {
-//         background: $line;
-//     }
-// }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $br;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $line;
+    }
+}
 
 @mixin pseudo() {
     content: '';
@@ -585,9 +587,11 @@
 @mixin font-pri($name: "Montserrat") {
     font-family: $name, sans-serif;
 }
+
 @mixin font-second($name: "Montserrat") {
     font-family: $name, sans-serif;
 }
+
 @mixin font-third($name: "Montserrat") {
     font-family: $name, sans-serif;
 }
@@ -595,6 +599,7 @@
 @mixin gap($gap, $col) {
     width: calc(100% / $col - ($gap - ($gap / $col)));
 }
+
 @mixin transChar ($dur, $delay, $type) {
     transition: $dur calc(var(--char-index) * $delay) $type;
 }
