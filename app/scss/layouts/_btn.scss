@@ -3,8 +3,8 @@
     width: fit-content;
     text-align: center;
     cursor: pointer;
-    border-radius: 0.8rem;
-    font-weight: 500;
+    border-radius: 0.4rem;
+    font-weight: 600;
     @include font-pri;
     @include transition(0.5s, ease);
     overflow: hidden;
@@ -13,9 +13,9 @@
     gap: 1rem;
     color: $color-white;
     font-size: 1.6rem;
-    height: 4rem;
+    height: 4.8rem;
     // border-radius: 100rem;
-    background-color: white;
+    background-color: var(--color-pri);
     border: 0.1rem solid var(--color-pri);
 
     >* {
@@ -29,8 +29,8 @@
         width: 100%;
         top: 0;
         left: 0;
-        background: var(--color-pri);
-        transform: scaleY(0);
+        background: white;
+        transform: scaleX(0);
         transform-origin: bottom right;
         transition: transform 0.5s ease;
     }
@@ -40,30 +40,34 @@
         display: grid;
         place-items: center;
         height: 100%;
-        padding: 1.6rem 3.2rem;
+        padding: 1.2rem 2rem;
         transition: 0.4s;
         @include flex;
         justify-content: center;
         gap: 1rem;
-        color: var(--color-pri);
+        color: white;
     }
+
     img {
         width: 2.4rem;
         height: 2.4rem;
+        filter: brightness(0) invert(1);
     }
 
     @include hover {
         .txt {
-            color: white;
+            color: var(--color-pri);
         }
+
         img {
-            filter: brightness(0) invert(1);
+            filter: brightness(0) saturate(100%) invert(35%) sepia(49%) saturate(6636%) hue-rotate(340deg) brightness(86%) contrast(121%);
         }
+
         &::after {
-            transform-origin: top right;
-            transform: scaleY(1);
+            transform-origin: top left;
+            transform: scaleX(1);
         }
-        
+
     }
 
     &.black {
@@ -102,112 +106,52 @@
         }
     }
 
-    &.orange {
-        background-color: #F29F24;
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+    &.second {
+        background-color: var(--color-second);
+        border: 0.1rem solid var(--color-second);
 
         .txt {
             color: white;
         }
 
         &::after {
-            background: var(--color-pri);
+            background-color: white;
         }
 
         @include hover {
-            .txt {
-                color: $color-white
-            }
-        }
-    }
-
-    &.trans {
-        background-color: transparent;
-        border: 0.1rem solid var(--color-pri);
-
-        .txt {
-            color: black;
-        }
-
-        img {
-            filter: brightness(1) invert(1);
-        }
-
-        &::after {
-            background: var(--color-pri);
-        }
-
-        @include hover {
-            border-color: white;
-
-            .txt {
-                color: $color-white
-            }
-
             img {
                 filter: none;
             }
+
+            .txt {
+                color: var(--color-second)
+            }
         }
     }
 
-    &.transpur {
-        background-color: transparent;
+    &.third {
+        background-color: white;
         border: 0.1rem solid var(--color-second);
 
         .txt {
             color: var(--color-second);
         }
 
-        img {
-            filter: brightness(1) invert(1);
+        &::after {
+            background-color: var(--color-second);
         }
 
-        &::after {
-            background: var(--color-second);
+        img {
+            filter: none;
         }
 
         @include hover {
             .txt {
-                color: $color-white
+                color: white
             }
 
             img {
-                filter: none;
-            }
-        }
-    }
-
-    &.second {
-        background-color: var(--color-pri);
-
-        .txt {
-            color: white;
-        }
-
-        &::after {
-            background-color: white;
-        }
-
-        @include hover {
-            .txt {
-                color: var(--color-pri)
-            }
-        }
-    }
-    &.third {
-        background-color: var(--color-pri);
-        border: 0.1rem solid white;
-        .txt {
-            color: white;
-        }
-
-        &::after {
-            background-color: white;
-        }
-
-        @include hover {
-            .txt {
-                color: var(--color-pri)
+                filter: brightness(0) invert(1);
             }
         }
     }
@@ -215,6 +159,35 @@
     &-gr {
         @include flex-wr;
         gap: 1rem;
+    }
+
+    &.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.cart {
+        border: 0.1rem solid var(--color-pri);
+        background: transparent;
+
+        .txt {
+            padding: 1.2rem;
+        }
+
+        &::after {
+            background-color: var(--color-pri);
+        }
+
+        img {
+            // filter: brightness(0) invert(1);
+            filter: none;
+        }
+
+        &:hover {
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
     }
 }
 
