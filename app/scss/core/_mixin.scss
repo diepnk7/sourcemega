@@ -624,3 +624,55 @@
     -o-mask-size: cover;
     -o-mask-repeat: no-repeat;
 }
+
+@mixin mt($mt) {
+    margin-top: $mt;
+
+    @include max(800px) {
+        margin-top: calc(#{$mt} / 2);
+    }
+}
+
+@mixin mb($mb) {
+    margin-bottom: $mb;
+
+    @include max(800px) {
+        margin-bottom: calc(#{$mb} / 2);
+    }
+}
+
+@mixin pt($pt) {
+    padding-top: $pt;
+
+    @include max(800px) {
+        padding-top: calc(#{$pt} / 2);
+    }
+}
+
+@mixin pb($pb) {
+    padding-bottom: $pb;
+
+    @include max(800px) {
+        padding-bottom: calc(#{$pb} / 2);
+    }
+}
+
+@mixin bg() {
+    position: relative;
+
+    .bg {
+        @include pseudo;
+        @include full-second;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        // opacity: .2;
+        pointer-events: none;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
