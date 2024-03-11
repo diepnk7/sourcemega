@@ -86,11 +86,15 @@
 
     &.white {
         background-color: white;
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+        // box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
         border: 0.1rem solid var(--color-pri);
 
+        // @include max(1200px) {
+        //     height: 3.8rem;
+        // }
+
         .txt {
-            color: var(--color-second);
+            color: var(--color-pri);
         }
 
         &::after {
@@ -98,10 +102,39 @@
         }
 
         @include hover {
-            border-color: white;
 
             .txt {
                 color: $color-white
+            }
+        }
+    }
+
+    &.bd-white {
+        background-color: white;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+        border: unset;
+
+        .txt {
+            color: var(--color-pri);
+            flex-direction: row-reverse;
+
+            img {
+                filter: unset;
+            }
+        }
+
+        &::after {
+            background: var(--color-pri);
+        }
+
+        @include hover {
+
+            .txt {
+                color: $color-white;
+
+                img {
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(10%) hue-rotate(238deg) brightness(104%) contrast(103%);
+                }
             }
         }
     }
@@ -166,26 +199,42 @@
         margin-right: auto;
     }
 
-    &.cart {
-        border: 0.1rem solid var(--color-pri);
-        background: transparent;
+    &.full {
+        width: 100%;
+    }
+
+    &.btn-pri {
+        padding: 0 1.2rem;
+
+        // @include max(1200px) {
+        //     height: 3.8rem;
+        // }
+
+        @include max(500px) {
+            padding: 0;
+        }
 
         .txt {
-            padding: 1.2rem;
+            @include max(1200px) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &.bg-trans {
+        background-color: transparent;
+
+        .txt {
+            color: $color-pri;
         }
 
         &::after {
-            background-color: var(--color-pri);
-        }
-
-        img {
-            // filter: brightness(0) invert(1);
-            filter: none;
+            background-color: $color-pri;
         }
 
         &:hover {
-            img {
-                filter: brightness(0) invert(1);
+            .txt {
+                color: $color-white;
             }
         }
     }

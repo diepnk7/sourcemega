@@ -10,14 +10,12 @@ block container
     // button
     // text | type | classCustom | img
     +btn("Normal", "", "center")
+    +btn("Normal border-pri white", "", "white center")    
     +btn("Second", "", "second center")
     +btn("Third", "", "third center")
     +btn("btn-gr", "", "btn-gr center")
-    +btn("Normal", "", "center", "ic-arr.svg")
-
-    .btn.cart.center 
-        span.txt 
-            +img("ic-cart.svg")
+    +btn("Normal arrow", "", "center", "ic-arr.svg")
+    +btn("Chia sẻ", "", "bd-white center", "ic-share.svg")
 
     // Start
     .star
@@ -161,21 +159,19 @@ block container
     // Pagi
     ul.page-numbers
         li
-            a.prev.page-numbers(href='')
-                i.fas.fa-chevron-double-left.icon
-        li
             span.page-numbers.current 1
         li
             a.page-numbers(href='') 2
         li
             a.page-numbers(href='') 3
         li
+            a.page-numbers(href='') 4
+        li
+            a.page-numbers(href='') 5
+        li
             a.page-numbers(href='') ...
         li
-            a.page-numbers(href='') 10
-        li
-            a.next.page-numbers(href='')
-                i.fas.fa-chevron-double-right.icon
+            a.page-numbers(href='') 20
     // End pagi
     // Recheck
     .recheck-block
@@ -242,7 +238,8 @@ block container
                     p.button-text
                         | Vào trang giỏ hàng
     // End cart mini
-    .popup.open
+    //- .popup.open
+    .popup
         .popup-overlay
         .popup-main
             .popup-main-wrapper
