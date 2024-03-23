@@ -144,6 +144,21 @@ block container
             li.sl-item.active(data-name='Option 1' data-slug='value 1')
             li.sl-item(data-name='Option 1' data-slug='value 2')
     // End Select custom
+    // Range
+    .range
+        .range-flex
+            .range-item.min
+                span.name.cl-pri.t12.fw-7 Tối thiểu
+                span.price 100.000 VND
+            .range-item.max
+                sapn.name.cl-pri.t12.fw-7 Tối đa
+                span.price 1.000.000 VND
+        .range-slider
+            .progress
+        .range-input
+            input.range-min.mona-input-fiter.re-select-input(type='range' name='price_min' min='0' max='50000000' value='0')
+            input.range-max.mona-input-fiter.re-select-input(type='range' name='price_max' min='0' max='50000000' value='50000000')
+        // <div class="text">1000.000đ - 5000.000đ</div>
     // Header User
     .user
         .user-ava
@@ -259,7 +274,7 @@ block container
                 | Date travel
         img(src='./assets/images/icon-calenda.svg' alt='')
     // 
-    // CÃ¢Ìu truÌc phÃ¢n trang
+    // Cấu trúc phân trang
     ul.page-numbers
         li
             a.prev.page-numbers(href='')

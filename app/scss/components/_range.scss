@@ -1,0 +1,99 @@
+// range
+.range {
+    .range-slider {
+        height: 0.2rem;
+        width: 100%;
+        background-color: #d9d9d9;
+        position: relative;
+
+        .progress {
+            position: absolute;
+            height: 0.2rem;
+            top: 0;
+            background-color: var(--color-pri);
+        }
+    }
+
+    .range-input {
+        position: relative;
+
+        input {
+            position: absolute;
+            top: -0.1rem;
+            height: 0.2rem;
+            width: 100%;
+            transform: translateY(-50%);
+            background: none;
+            pointer-events: none;
+            -webkit-appearance: none;
+            margin: 0;
+            cursor: pointer;
+
+            &:first-child::-webkit-slider-thumb {
+                height: 1.6rem;
+                width: 1.6rem;
+            }
+
+            &::-webkit-slider-thumb {
+                height: 1.6rem;
+                width: 1.6rem;
+                border-radius: 50%;
+                pointer-events: auto;
+                -webkit-appearance: none;
+                background-color: white;
+                border: 0.3rem solid var(--color-pri);
+            }
+
+            &::-moz-slider-thumb {
+                height: 1.6rem;
+                width: 1.6rem;
+                border: none;
+                border-radius: 50%;
+                border: 0.3rem solid var(--color-pri);
+                pointer-events: auto;
+                -moz-appearance: none;
+                background-color: white;
+                box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+            }
+        }
+    }
+
+    .text {
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+        color: #444444;
+        margin-bottom: 0.8rem;
+    }
+
+    .range-flex {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        gap: .8rem;
+    }
+
+    .range-item {
+        font-size: 1.4rem;
+        @include flex;
+        flex-direction: column;
+        font-weight: 500;
+
+        .name {
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            border-radius: 2.4rem;
+            padding: 1.4rem 1rem;
+            background-color: white;
+            min-width: 12rem;
+            display: block;
+            border: 0.1rem solid #EAEAEA;
+        }
+    }
+}
