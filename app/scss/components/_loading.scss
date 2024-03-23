@@ -1,0 +1,144 @@
+.loading {
+    position: fixed;
+    z-index: 6000;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: $color-white;
+    pointer-events: none;
+    
+    &.final{
+
+        .loading_img img{
+            animation: phongToLogo 1s linear forwards;
+        }
+
+        animation: anLoading 1s linear forwards 1s;
+    }
+
+    &.loaded{
+        .loading_wrap{
+            animation: loadingLogo1 1s linear forwards;
+        }
+
+        .loading_img{
+            animation: loadingLogo2 6s linear forwards infinite alternate 1.2s;
+        }
+    }
+
+    @keyframes loadingLogo1 {
+        0% {
+            transform: translate(-50%, 300%);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translate(-50%, 150%);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadingLogo2 {
+        0% {
+            transform: translateY(0%);
+        }
+
+        10% {
+            transform: translateY(10%);
+        }
+
+        20% {
+            transform: translateY(0%);
+        }
+
+        30% {
+            transform: translateY(-10%);
+        }
+
+        40% {
+            transform: translateY(0%);
+        }
+
+        50% {
+            transform: translateY(10%);
+        }
+
+        60% {
+            transform: translateY(0%);
+        }
+
+        70% {
+            transform: translateY(-10%);
+        }
+
+        80% {
+            transform: translateY(0%);
+        }
+
+        90% {
+            transform: translateY(10%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes phongToLogo {
+        0%{
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50%{
+            transform: scale(10);
+            opacity: 0.5;
+        }
+
+        100%{
+            transform: scale(15);
+            opacity: 0;
+        }
+    }
+
+    @keyframes anLoading {
+        0%{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        50%{
+            opacity: 0.5;
+        }
+
+        100%{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &_wrap {
+        max-width: 26.5rem;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -300%);
+        opacity: 0;
+       
+    }
+
+    &_img {
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

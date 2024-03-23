@@ -2,57 +2,592 @@
     font-size: 20rem;
 
     @media only screen and (max-width: 1200px) {
+        font-size: 16rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 13rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 10rem;
+    }
+
+    @media only screen and (max-width: 460px) {
+        font-size: 8rem;
+    }
+}
+
+@mixin fz-180 {
+    font-size: 18rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size:16rem;
+    }
+
+    @media only screen and (max-width: 800px) {
         font-size: 15rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 14rem;
+    }
+
+    @media only screen and (max-width: 460px) {
+        font-size: 9rem;
+    }
+}
+
+@mixin fz-160 {
+    font-size: 16rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size:14rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 14rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 13rem;
+    }
+
+    @media only screen and (max-width: 460px) {
+        font-size: 8rem;
+    }
+}
+
+@mixin fz-140 {
+    font-size: 14rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size:13rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 12rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 10rem;
+    }
+
+    @media only screen and (max-width: 460px) {
+        font-size: 6rem;
+    }
+}
+
+@mixin fz-120 {
+    font-size: 12rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size:11rem;
     }
 
     @media only screen and (max-width: 800px) {
         font-size: 10rem;
     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 9rem;
+    }
+
+    @media only screen and (max-width: 460px) {
+        font-size: 7rem;
+    }
 }
 
-@mixin fz-90 {
-    font-size: 9rem;
+@mixin fz-100 {
+    font-size: 10rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 9rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 7rem;
+    }
+
+    @media only screen and (max-width: 460px) {
+        font-size: 6rem;
+    }
+
+    
+}
+
+@mixin fz-98 {
+    font-size: 9.8rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 8.8rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 7.8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 6.8rem;
+    }
+
+    
+}
+
+@mixin fz-96 {
+    font-size: 9.6rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 8.6rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 7.6rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 6.6rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        font-size: 4.2rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+        font-size: 3.6rem;
+    }
+}
+
+@mixin fz-94 {
+    font-size: 9.4rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 8.4rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 7.4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 6.4rem;
+    }
+
+    
+}
+
+
+
+@mixin fz-92 {
+    font-size: 9.2rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 8.2rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 7.2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 6.2rem;
+    }
+
+    
+}
+
+
+
+@mixin fz-88 {
+    font-size: 8.8rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 7.8rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 6.8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 5.8rem;
+    }
+
+    
+}
+
+
+
+@mixin fz-86 {
+    font-size: 8.6rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 7.6rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 6.6rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 5.6rem;
+    }
+
+    
+}
+
+
+
+@mixin fz-84 {
+    font-size: 8.4rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 7.4rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 6.4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 5.4rem;
+    }
+
+    
+}
+
+
+
+
+@mixin fz-82 {
+    font-size: 8.2rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 7.2rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 6.2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 5.2rem;
+    }
+
+    
+}
+
+
+@mixin fz-80 {
+    font-size: 8rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 5rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 4.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 4rem;
+        line-height: 1.5 !important;
+
+    }
+
+    @media only screen and (max-width: 460px) {
+        font-size: 3rem;
+        line-height: 1.5 !important;
+    }
+
+    
+}
+
+@mixin fz-78 {
+    font-size: 7.8rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 5.8rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 4.8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.8rem;
+    }
+
+    
+}
+
+@mixin fz-76 {
+    font-size: 7.6rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 5.6rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 4.6rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.6rem;
+    }
+
+    
+}
+
+@mixin fz-74 {
+    font-size: 7.4rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 6.4rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 5.4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 4.4rem;
+    }
+
+    
+}
+
+@mixin fz-70 {
+    font-size: 7rem;
 
     @media only screen and (max-width: 1200px) {
         font-size: 6rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 4.5rem;
+        font-size: 5rem;
     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 4rem;
+    }
+
+    
+}
+
+
+@mixin fz-68 {
+    font-size: 6.8rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 5.8rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 4.8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.8rem;
+    }
+
+    
+}
+
+@mixin fz-66 {
+    font-size: 6.6rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 5.6rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 4.6rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.6rem;
+    }
+
+    
+}
+
+
+@mixin fz-64 {
+    font-size: 6.4rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 5.4rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 4.4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3rem !important;
+    }
+
+    
+}
+
+
+@mixin fz-62 {
+    font-size: 6.2rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 5.2rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 4.2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.2rem;
+    }
+
+    
+}
+
+@mixin fz-58 {
+    font-size: 5.8rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 4.8rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 3.8rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2.8rem;
+    }
+}
+
+@mixin fz-54 {
+    font-size: 5.4rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 4.4rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 3.4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2.4rem;
+    }
+}
+
+@mixin fz-52 {
+    font-size: 5.2rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 4.2rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 3.2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2.2rem;
+    }
+
+   
+}
+
+@mixin fz-46 {
+    font-size: 4.6rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 3.6rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 2.6rem;
+    }
+    @media only screen and (max-width: 600px) {
+        font-size: 1.6rem;
+    }
+
+   
+}
+
+@mixin fz-44 {
+    font-size: 4.4rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 3.4rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 2.4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 1.4rem;
+    }
+
+   
+}
+
+@mixin fz-90 {
+    font-size: 9rem;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 8rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: 7rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 6rem;
+    }
+
+    
 }
 
 @mixin fz-72 {
     font-size: 7.2rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 5rem;
+        font-size: 6.2rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 4rem;
-    }
-}
-@mixin fz-68 {
-    font-size: 6.8rem;
-
-    @media only screen and (max-width: 1200px) {
-        font-size: 5rem;
+        font-size: 5.2rem;
     }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 3rem;
+    @media only screen and (max-width: 600px) {
+        font-size: 4.2rem;
     }
+
+   
 }
+
 @mixin fz-65 {
     font-size: 6.5rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 4rem;
+        font-size: 5.5rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 3rem;
+        font-size: 4.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.5rem;
     }
 }
 
@@ -60,11 +595,19 @@
     font-size: 6.4rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 3.9rem;
+        font-size: 5.4rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 2.9rem;
+        font-size: 4.4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.4rem;
+    }
+
+    @media only screen and (max-width: 460px) {
+        font-size: 3rem;
     }
 }
 
@@ -72,11 +615,15 @@
     font-size: 6rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 3.5rem;
+        font-size: 5.5rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 2.5rem;
+        font-size: 4.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 3.5rem;
     }
 }
 
@@ -84,11 +631,15 @@
     font-size: 5.6rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 5.1rem;
+        font-size: 4.6rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 4rem;
+        font-size: 3.6rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2.6rem;
     }
 }
 
@@ -96,11 +647,15 @@
     font-size: 5.5rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 3.9rem;
+        font-size: 3.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2.5rem;
     }
 }
 
@@ -108,11 +663,15 @@
     font-size: 5rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 3.4rem;
+        font-size: 3rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2rem;
     }
 }
 
@@ -120,59 +679,57 @@
     font-size: 4.8rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 4.3rem;
+        font-size: 3.8rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 3.3rem;
+        font-size: 2.8rem;
     }
+
+    @media only screen and (max-width: 300px) {
+        font-size: 2.4rem;
+    }
+
+  
 }
 
 @mixin fz-45 {
     font-size: 4.5rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 3rem;
-    }
-}
-
-@mixin fz-44 {
-    font-size: 4.4rem;
-
-    @media only screen and (max-width: 1200px) {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 3rem;
-    }
+   
 }
 
 @mixin fz-42 {
     font-size: 4.2rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 2.7rem;
+        font-size: 2.2rem;
     }
+
+   
 }
 
 @mixin fz-40 {
     font-size: 4rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 2.7rem;
+    @media only screen and (max-width: 600px) {
+        font-size: 2.4rem;
     }
 }
 
@@ -180,11 +737,11 @@
     font-size: 3.8rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 3.4rem;
+        font-size: 2.8rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -192,11 +749,11 @@
     font-size: 3.6rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 3.1rem;
+        font-size: 3.2rem;
     }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 2.6rem;
+    @media only screen and (max-width: 600px) {
+        font-size: 2rem;
     }
 }
 
@@ -204,35 +761,35 @@
     font-size: 3.5rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 3rem;
-    }
-
-    @media only screen and (max-width: 800px) {
         font-size: 2.5rem;
     }
+
+    // @media only screen and (max-width: 800px) {
+    //     font-size: 2.5rem;
+    // }
 }
 
 @mixin fz-34 {
     font-size: 3.4rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 2.9rem;
-    }
-
-    @media only screen and (max-width: 800px) {
         font-size: 2.4rem;
     }
+
+    // @media only screen and (max-width: 800px) {
+    //     font-size: 2.4rem;
+    // }
 }
 
 @mixin fz-32 {
     font-size: 3.2rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 2.7rem;
+        font-size: 2.2rem;
     }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 2.2rem;
+    @media only screen and (max-width: 600px) {
+        font-size: 2rem;
     }
 }
 
@@ -240,23 +797,23 @@
     font-size: 3rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 2.7rem;
+        font-size: 2rem;
     }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 2.4rem;
-    }
+    // @media only screen and (max-width: 800px) {
+    //     font-size: 2.4rem;
+    // }
 }
 
 @mixin fz-29 {
     font-size: 2.9rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 2.6rem;
+        font-size:2.6rem;
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 2.3rem;
+        font-size: 1.9rem;
     }
 }
 
@@ -268,7 +825,7 @@
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -280,7 +837,7 @@
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -292,7 +849,7 @@
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -300,12 +857,12 @@
     font-size: 2.4rem;
 
     @media only screen and (max-width: 1200px) {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 1.7rem;
-    }
+    // @media only screen and (max-width: 800px) {
+    //     font-size: 1.8rem;
+    // }
 }
 
 @mixin fz-22 {
@@ -327,9 +884,9 @@
         font-size: 1.8rem;
     }
 
-    @media only screen and (max-width: 800px) {
-        font-size: 1.6rem;
-    }
+    // @media only screen and (max-width: 800px) {
+    //     font-size: 1.6rem;
+    // }
 }
 
 @mixin fz-19 {
@@ -352,8 +909,16 @@
     }
 
     @media only screen and (max-width: 800px) {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 1.2rem;
+    }
+
+    // @media only screen and (max-width: 500px) {
+    //     font-size: 1.2rem;
+    // }
 }
 
 @mixin fz-17 {
@@ -370,6 +935,10 @@
 
 @mixin fz-14 {
     font-size: 1.4rem;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 1.2rem;
+    }
 }
 
 @mixin fz-13 {

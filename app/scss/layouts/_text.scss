@@ -1,71 +1,512 @@
-.t-title {
-    @include fz-44;
-    font-weight: 700;
-    color: $color-pri;
+// .t-title {
+//     @include fz-44;
+//     font-weight: 700;
+//     color: $color-pri;
 
-    @include max(600px) {
-        font-size: 2.2rem;
+//     @include max(600px) {
+//         font-size: 2.2rem;
+//     }
+// }
+
+// .title-sub {
+//     font-weight: 700;
+//     color: $color-third;
+
+//     &.dc {
+//         --w: 1.9rem;
+//         display: inline-block;
+//         padding-right: calc(var(--w) + .4rem);
+//         position: relative;
+
+//         &::after {
+//             @include pseudo;
+//             background-image: url(../assets/images/la-dc-1.svg);
+//             width: var(--w);
+//             height: var(--w);
+//             background-repeat: no-repeat;
+//             background-size: contain;
+//             background-position: center;
+//             right: 0;
+//             top: -.4rem;
+//             clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+//         }
+
+//         &.is-inview {
+//             &::after {
+//                 animation: laRight 1s ease-in-out .3s forwards;
+//             }
+//         }
+//     }
+// }
+
+// .t-title-second {
+//     @include fz-32;
+//     font-weight: 700;
+//     color: $color-pri;
+// }
+
+// @keyframes laRight {
+//     0% {
+//         clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+//     }
+
+//     50% {
+//         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+//     }
+
+//     75% {
+//         transform: rotate(10deg);
+//     }
+
+//     100% {
+//         transform: rotate(0deg);
+//         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+//     }
+// }
+.f {
+    &-14 {
+        @include fz-14;
+    }
+
+    &-16 {
+        @include fz-16;
+    }
+
+    &-18 {
+        @include fz-18;
+    }
+
+    &-20 {
+        @include fz-20;
+    }
+
+    &-22 {
+        @include fz-22;
+    }
+
+    &-24 {
+        @include fz-24;
+    }
+
+    &-26 {
+        @include fz-26;
+    }
+
+    &-28 {
+        @include fz-28;
+    }
+
+    &-30 {
+        @include fz-30;
+    }
+
+    &-32 {
+        @include fz-32;
+    }
+
+    &-34 {
+        @include fz-34;
+    }
+
+    &-36 {
+        @include fz-36;
+    }
+
+    &-38 {
+        @include fz-38;
+    }
+
+    &-40 {
+        @include fz-40;
+    }
+
+    &-42 {
+        @include fz-42;
+    }
+
+    &-44 {
+        @include fz-44;
+    }
+
+    &-46 {
+        @include fz-46;
+    }
+
+    &-48 {
+        @include fz-48;
+    }
+
+    &-50 {
+        @include fz-50;
+    }
+
+    &-52 {
+        @include fz-52;
+    }
+
+    &-54 {
+        @include fz-54;
+    }
+
+    &-56 {
+        @include fz-56;
+    }
+
+    &-58 {
+        @include fz-58;
+    }
+
+    &-60 {
+        @include fz-60;
+    }
+
+    &-62 {
+        @include fz-62;
+    }
+
+    &-64 {
+        @include fz-64;
+    }
+
+    &-66 {
+        @include fz-66;
+    }
+
+    &-68 {
+        @include fz-68;
+    }
+
+    &-70 {
+        @include fz-70;
+    }
+
+    &-72 {
+        @include fz-72;
+    }
+
+    &-74 {
+        @include fz-74;
+    }
+
+    &-76 {
+        @include fz-76;
+    }
+
+    &-78 {
+        @include fz-78;
+    }
+
+    &-80 {
+        @include fz-80;
+    }
+
+    &-82 {
+        @include fz-82;
+    }
+
+    &-84 {
+        @include fz-84;
+    }
+
+    &-86 {
+        @include fz-86;
+    }
+
+    &-88 {
+        @include fz-88;
+    }
+
+    &-90 {
+        @include fz-90;
+    }
+
+    &-92 {
+        @include fz-92;
+    }
+
+    &-94 {
+        @include fz-94;
+    }
+
+    &-96 {
+        @include fz-96;
+    }
+
+    &-98 {
+        @include fz-98;
+    }
+
+    &-100 {
+        @include fz-100;
+    }
+
+    &-120 {
+        @include fz-120;
+    }
+
+    &-140 {
+        @include fz-140;
+    }
+
+    &-160 {
+        @include fz-160;
+    }
+
+    &-180 {
+        @include fz-180;
+    }
+
+    &-200 {
+        @include fz-200;
     }
 }
 
-.title-sub {
-    font-weight: 700;
-    color: $color-third;
+.wrap-text {
+    @include flex;
+    align-items: center;
 
-    &.dc {
-        --w: 1.9rem;
-        display: inline-block;
-        padding-right: calc(var(--w) + .4rem);
+    .icon {
+        width: 3.2rem;
+        display: block;
+        margin-right: 1.2rem;
+    }
+}
+
+.t {
+    &-white {
+        color: white;
+    }
+
+    &-main {
+        color: $color-pri;
+    }
+
+    &-second {
+        color: $color-second;
+    }
+
+    &-third {
+        color: $color-third;
+    }
+
+    &-text-2 {
+        color: #040404;
+    }
+
+    &-pink {
+        color: #ed907a;
+    }
+
+    &-1D1E41 {
+        color: #1d1e41;
+    }
+
+    &-underline {
+        text-decoration: underline;
+    }
+
+    &-line {
         position: relative;
+        display: inline-block;
 
-        &::after {
-            @include pseudo;
-            background-image: url(../assets/images/la-dc-1.svg);
-            width: var(--w);
-            height: var(--w);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            right: 0;
-            top: -.4rem;
-            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        &::before {
+            position: absolute;
+            content: "";
+            min-width: 48rem;
+            width: calc(100% + 3rem);
+            height: 2.8rem;
+            background: $color-pri;
+            bottom: 0%;
+            transform: translateY(0%);
+            z-index: -1;
+
+            @include max(1200px) {
+                min-width: 32rem;
+                height: 1.4rem;
+            }
+
+            @include max(800px) {
+                min-width: 26rem;
+                height: 1rem;
+            }
         }
 
-        &.is-inview {
+        &.right {
+            &::before {
+                right: 0;
+            }
+        }
+
+        &.left {
+            &::before {
+                left: 0;
+            }
+        }
+
+        &.line-2 {
+            .text {
+                &::before {
+                    bottom: 0.8rem;
+                    top: auto;
+                    transform: none;
+                    background: #d9d9d9;
+                    height: 0.2rem;
+                }
+            }
+        }
+
+        &.short {
+            margin-top: 0;
+
+            &::before,
             &::after {
-                animation: laRight 1s ease-in-out .3s forwards;
+                position: absolute;
+                content: "";
+                width: 6.6rem;
+                height: 0.1rem;
+                background: $color-pri;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &::before {
+                right: calc(100% + 0.9rem);
+            }
+
+            &::after {
+                left: calc(100% + 0.9rem);
+            }
+        }
+
+        &-db {
+            position: relative;
+            padding-bottom: 1rem;
+
+            &::before,
+            &:after {
+                position: absolute;
+                content: "";
+                width: 5rem;
+                height: 0.2rem;
+                background: $color-second;
+                left: 50%;
+            }
+
+            &::before {
+                bottom: 0;
+                transform: translateX(-10%);
+            }
+
+            &::after {
+                bottom: 0.5rem;
+                transform: translateX(-60%);
+            }
+
+            &.line {
+                &-db {
+                    &-2 {
+                        &::after {
+                            left: 0;
+                            transform: none;
+                        }
+
+                        &::before {
+                            left: 0;
+                            transform: translateX(50%);
+                        }
+                    }
+                }
             }
         }
     }
+
+    &-break {
+        white-space: pre-line;
+    }
+
+    &-stroke {
+        // -webkit-text-stroke-width: 0.1rem;
+        // -webkit-text-stroke-color: white;
+        // color: transparent;
+        text-shadow:
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem black,
+            0 0 0.15rem white,
+            0 0 0.15rem white,
+            0 0 0.15rem white;
+        -webkit-font-smoothing: antialiased;
+        color: $color-second;
+    }
+
+    &-pre-line {
+        white-space: pre-line;
+    }
+
+    &-sp {
+        &-1 {
+            letter-spacing: 0.06em;
+        }
+    }
+
+    &-sd {
+        &-1 {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &-font {
+        &-2 {
+            font-family: "SVN-Taken by Vultures";
+        }
+    }
 }
 
-.t-title-second {
-    @include fz-32;
-    font-weight: 700;
-    color: $color-pri;
+.t-pre-lỉne {
+    white-space: pre-line;
 }
 
-@keyframes laRight {
-    0% {
-        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    }
-
-    50% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
-    75% {
-        transform: rotate(10deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
+.t-linear {
+    background: linear-gradient(90deg, #39b16c 2.67%, #38af6b 3.67%, #255361 71.67%, #1e2f5e 102.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
-.t-center {
-    text-align: center;
+.text-line {
+    padding-bottom: 2rem;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 0.1rem;
+        width: 12rem;
+        background: linear-gradient(0deg, #0eb252 47.37%, #72c595 102.98%);
+        opacity: 0.5;
+        bottom: 0;
+        left: 0;
+
+        @include max(450px) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 .fw-1 {
@@ -74,6 +515,10 @@
 
 .fw-2 {
     font-weight: 200;
+}
+
+.fw-4 {
+    font-weight: 400;
 }
 
 .fw-3 {
@@ -100,66 +545,14 @@
     font-weight: bold;
 }
 
-.fsi {
+.fw-i {
     font-style: italic;
 }
 
-.t-up {
+.t-upper {
     text-transform: uppercase;
 }
 
-.t9 {
-    @include fz-9
-}
-
-.t11 {
-    @include fz-11
-}
-
-.t12 {
-    @include fz-12
-}
-
-.t14 {
-    @include fz-14
-}
-
-.t16 {
-    @include fz-16
-}
-
-.t18 {
-    @include fz-18
-}
-
-.t20 {
-    @include fz-20
-}
-
-.t24 {
-    @include fz-24
-}
-
-.t32 {
-    @include fz-32
-}
-
-.t40 {
-    @include fz-40
-}
-
-.t48 {
-    @include fz-48
-}
-
-.t56 {
-    @include fz-56
-}
-
-.t64 {
-    @include fz-64
-}
-
-.t72 {
-    @include fz-72
+.t-non-upper {
+    text-transform: unset;
 }
