@@ -1,84 +1,83 @@
 :root {
     // text
     --text: #030D19;
-    --text-hover:var(--color-pri);
-    --fw:400;
+    --text-hover: var(--color-pri);
+    --fw: 400;
     // background sub
-    --back: white; 
+    --back: white;
     // sub
-    --textsub:var(--color-text);
+    --textsub: var(--color-text);
     // font size
-    --fz:1.6rem;
+    --fz: 1.6rem;
+
     @include max(1470px) {
-        --fz:1.6rem;
+        --fz: 1.6rem;
     }
 }
+
 .hd-nav {
-    height: 100%;
     .menu {
         &-nav {
             height: 100%;
+
             >.menu-list {
                 height: 100%;
-                gap: 4rem;
+                justify-content: center;
+
                 >.menu-item {
                     height: 100%;
                     @include flex;
                     align-items: center;
 
-
-                    &:last-child {
-                        >.menu-list {
-                            left: initial;
-                            right: 0;
-                        }
+                    &:not(:first-child) {
+                        margin-left: 6.4rem;
                     }
 
                     &::before {
                         content: "";
                         position: absolute;
+                        // bottom: 4.5rem;
                         bottom: 0;
                         @include posi-horizontal;
                         height: 0.2rem;
-                        background: var(--color-pri);
+                        background-color: $color-pri;
                         width: 0;
                         border-radius: 100px;
                         @include transitionRe;
                     }
 
-                    &:hover:not(.dropdown),
-                    &:has(.current-menu-item) {
-                        &::before {
-                            width: 6.4rem;
-                        }
-
-                        &::after {
-                            animation: menuLa 1s ease-in-out 0.5s forwards;
-                        }
-                    }
-
-                    &.dropdown {
+                    @include min($res-mobile-min) {
                         &:hover {
                             &::before {
-                                width: 6.4rem;
+                                width: 2.4rem;
                             }
                         }
                     }
 
                     &:hover {
-                        >a {
-                            color: var(--text-hover);
-                            i {
-                                transform: rotate(180deg);
-                            }
+                        >.menu-link {
+                            border-radius: .4rem;
+                            color: $color-pri;
                         }
+
+                        // .mega {
+                        //     transform: translate(-50%, 0);
+                        //     visibility: visible;
+                        //     opacity: 1;
+                        // }
+
+                        // .mega-overlay {
+                        //     @include show;
+                        // }
                     }
 
                     >.menu-link {
                         height: 100%;
                         @include flex;
                         align-items: center;
+                        @include fz-16;
                         color: var(--text);
+                        padding: 1.35rem 0;
                     }
 
                     &.current_page_item,
@@ -86,26 +85,30 @@
                     &.current_page_parent,
                     &.current-menu-parent,
                     &.current-post-parent {
-                        >a {
-                            color:  var(--text-hover);
-                        }
-                        &::before {
-                            width: 6.4rem;
+                        >.menu-link {
+                            color: $color-pri;
+                            font-weight: 700;
                         }
 
-                        &::after {
-                            animation: menuLa 1s ease-in-out 0.5s forwards;
+                        &::before {
+                            width: 2.4rem;
                         }
                     }
 
                     >.menu-list {
-                        top: calc(100% + 0.7rem);
+                        top: calc(100% - 1rem);
+                        border-radius: .4rem;
+
                         &::after {
-                            @include pseudo;
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            left: 1rem;
+                            border-left: 1rem solid transparent;
+                            border-right: 1rem solid transparent;
+                            border-bottom: 0.8rem solid $color-white;
+                            position: absolute;
                             bottom: 100%;
-                            left: 0;
-                            height: 0.7rem;
-                            width: 100%;
                         }
                     }
                 }
@@ -123,25 +126,30 @@
 
             &:hover {
                 >.menu-list {
-                    @include show;
+                    @include min($res-mobile-min) {
+                        @include show;
+                    }
 
                     >.menu-item {
 
                         &.current_page_item,
-                        &.current-menu-item {
+                        &.current-menu-item,
+                        &.current_page_parent,
+                        &.current-menu-parent,
+                        &.current-post-parent {
                             >a {
-                                &::before {
-                                    width: 100%;
+                                color: $color-pri;
+
+                                >i {
+                                    color: white;
                                 }
-                                color:  var(--text-hover);
                             }
                         }
                     }
                 }
             }
 
-            .menu-link,
-            a {
+            .menu-link {
                 @include transition(0.2s, ease-in-out);
 
                 i {
@@ -149,19 +157,18 @@
                 }
             }
 
-            >.menu-link,
-            >a {
-                color: var(--textsub);
-                font-weight: var(--fw);
+            >.menu-link {
+                color: var(--text);
+                font-weight: 500;
                 display: block;
-                font-size: var(--fz);
+                font-size: 1.6rem;
 
                 >i {
                     display: none;
                     font-weight: 600;
                     margin-left: 0.4rem;
-                    font-size: 1.4rem;
-                    color: inherit;
+                    @include fz-10;
+                    margin-top: 0rem;
                 }
             }
 
@@ -178,63 +185,69 @@
                 top: 0;
                 left: 0;
                 min-width: 25rem;
-                max-width: 28rem;
                 @include flex;
                 flex-direction: column;
                 align-items: flex-start;
-                background: var(--back);
-                box-shadow: var(--sdow);
-                border-radius: .4rem;
+                background-color: #FAFAFA;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 10px;
+                // border-radius: 0 0 1.6rem 1.6rem;
                 @include transitionRe;
-                @include hidden(0, -5px);
+
+                // &:after {
+                //     content: '';
+                //     position: absolute;
+                //     bottom: 0;
+                //     left: 0;
+                //     width: 100%;
+                //     height: 2px;
+                //     background-color: $color-four
+                // }
+                @include min($res-mobile-min) {
+                    @include hidden(0, 5px);
+                }
 
                 >.menu-item {
                     margin-left: 0;
                     width: 100%;
 
-                    // &:not(:last-child) {
-                    //     border-bottom: 0.1rem solid rgba($color: white, $alpha: 0.5);
+                    // &::after {
+                    //     content: "";
+                    //     position: absolute;
+                    //     right: 0;
+                    //     top: 0;
+                    //     height: 100%;
+                    //     width: 0.2rem;
+                    //     background-color: $color-second;
+                    //     @include transition(0.2s, ease-in-out);
+                    //     opacity: 0;
                     // }
-                    &:hover {
-                        &::after {
-                            opacity: 1;
-                        }
+                    @include min($res-mobile-min) {
+                        &:hover {
+                            &::after {
+                                opacity: 1;
+                            }
 
-                        >.menu-link,
-                        >a {
-                            color: var(--text-hover);
+                            >.menu-link {
+                                border-radius: .4rem;
+                                color: $color-white;
+                                background-color: $color-pri;
 
-                            // &::after {
-                            //     width: 100%;
-                            // }
-
-                            >i {
-                                // color: white;
+                                >i {
+                                    // color: white;
+                                }
                             }
                         }
                     }
 
-                    >.menu-link,
-                    >a {
-                        padding: .5rem 1rem;
+                    >.menu-link {
+                        padding: 1rem;
                         @include flex;
                         align-items: center;
                         justify-content: space-between;
-                        position: relative;
 
-                        // &::after {
-                        //     @include pseudo;
-                        //     @include posi-horizontal;
-                        //     height: 100%;
-                        //     background: $color-pri;
-                        //     width: 0%;
-                        //     z-index: -1;
-                        //     transition: all .4s ease-in-out;
-                        // }
                         >i {
                             transform: rotate(-90deg) translate(5px, 0);
                             margin-top: 0.8rem;
-                            font-size: 1rem;
                         }
                     }
 
@@ -320,6 +333,7 @@
             &.active {
                 >a {
                     color: var(--text-hover) !important;
+
                     >i {
                         transform: rotate(180deg);
                     }

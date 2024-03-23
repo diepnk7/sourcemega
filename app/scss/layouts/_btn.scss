@@ -1,9 +1,11 @@
 .btn {
     @include mid-flex;
     width: fit-content;
+    // width: 20rem;
+    // max-width: 100%;
     text-align: center;
     cursor: pointer;
-    border-radius: 0.4rem;
+    border-radius: 5rem;
     font-weight: 600;
     @include font-pri;
     @include transition(0.5s, ease);
@@ -12,7 +14,7 @@
     background: transparent;
     gap: 1rem;
     color: $color-white;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     height: 4.8rem;
     // border-radius: 100rem;
     background-color: var(--color-pri);
@@ -23,16 +25,19 @@
         z-index: 2;
     }
 
-    &::after {
-        @include pseudo;
-        height: 100%;
-        width: 100%;
+    &:after {
+        position: absolute;
+        content: "";
+        width: 120%;
+        height: 102%;
         top: 0;
-        left: 0;
-        background: white;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.5s ease;
+        left: -13%;
+        // background: rgba(0, 0, 0, 0.2);
+        background: $color-white;
+        transition: transform 0.6s;
+        z-index: 0;
+        transform-origin: right;
+        transform: skew(30deg) scaleX(0);
     }
 
     .txt {
@@ -40,21 +45,22 @@
         display: grid;
         place-items: center;
         height: 100%;
-        padding: 1.2rem 2rem;
+        padding: 1.4rem 2.5rem;
         transition: 0.4s;
         @include flex;
         justify-content: center;
         gap: 1rem;
         color: white;
+        flex-shrink: 0;
     }
 
     img {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 4rem;
+        height: 4rem;
         filter: brightness(0) invert(1);
     }
 
-    @include hover {
+    &:hover {
         .txt {
             color: var(--color-pri);
         }
@@ -64,8 +70,8 @@
         }
 
         &::after {
-            transform-origin: top left;
-            transform: scaleX(1);
+            transform: skew(30deg) scaleX(1);
+            transform-origin: left;
         }
 
     }
@@ -111,11 +117,25 @@
 
     &.bd-white {
         background-color: white;
-        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+        // box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
         border: unset;
+        height: 3.2rem;
+        flex-shrink: 0;
+
+        &::after {
+            background: var(--color-hover) !important;
+        }
 
         .txt {
+            padding: .8rem 1.6rem;
+
+            @include max(800px) {
+                padding: .4rem .8rem;
+            }
+
             color: var(--color-pri);
+            font-weight: 600;
+            @include fz-12;
             flex-direction: row-reverse;
 
             img {
@@ -238,6 +258,19 @@
             }
         }
     }
+
+    &.arrow {
+        .txt {
+            padding-right: .4rem;
+
+            gap: 2rem;
+        }
+    }
+
+    &.w200 {
+        width: 20rem;
+        max-width: 100%;
+    }
 }
 
 .seeDetail {
@@ -249,5 +282,22 @@
 
     @include hover {
         color: var(--color-second);
+    }
+}
+
+.link {
+    display: block;
+    color: $color-pri;
+    width: 100%;
+    font-weight: 700;
+    @include fz-16;
+    transition: .3s;
+
+    &:hover {
+        color: var(--color-second);
+    }
+
+    &.center {
+        text-align: center;
     }
 }
