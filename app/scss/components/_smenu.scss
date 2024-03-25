@@ -124,7 +124,31 @@
             position: relative;
             @include transition(0.2s, ease-in-out);
 
-            &:hover {
+            >.menu-list {
+                @include min($res-mobile-min) {
+                    @include show;
+                }
+
+                >.menu-item {
+
+                    &.current_page_item,
+                    &.current-menu-item,
+                    &.current_page_parent,
+                    &.current-menu-parent,
+                    &.current-post-parent {
+                        >a {
+                            color: $color-white;
+                            background: var(--color-pri);
+
+                            >i {
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include hover {
                 >.menu-list {
                     @include min($res-mobile-min) {
                         @include show;
@@ -138,10 +162,11 @@
                         &.current-menu-parent,
                         &.current-post-parent {
                             >a {
-                                color: $color-pri;
+                                color: $color-white;
+                                background: var(--color-pri);
 
                                 >i {
-                                    color: white;
+                                    color: $color-white;
                                 }
                             }
                         }
