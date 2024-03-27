@@ -1,0 +1,118 @@
+.search-mona {
+    @include max($res-mobile) {
+        position: fixed;
+        top: 6rem;
+        right: 1.5rem;
+        left: 1.5rem;
+        z-index: 101;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(0.3s, ease-in-out);
+        &.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+    &-overlay {
+        @include min($res-mobile-min) {
+            display: none
+        }
+        position: fixed;
+        @include full-second;
+        z-index: 100;
+        background-color: rgba($color: $color-black, $alpha: 0.5);
+        backdrop-filter: blur(0.5rem);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        @include transition(0.3s, ease-in-out);
+        &.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 0);
+        }
+    }
+    &-wrapper {
+        position: relative;
+    }
+    &-close {
+        @include min($res-mobile-min) {
+            display: none
+        }
+        @include posi-horizontal;
+        cursor: pointer;
+        width: 3.4rem;
+        height: 3.4rem;
+        bottom: calc(100% + 0.5rem);
+        @include mid-flex;
+        border: 0.2rem solid white;
+        border-radius: 100rem;
+        z-index: 101;
+        i {
+            color: white;
+            font-size: 2.4rem;
+            font-weight: 300;
+        }
+    }
+}
+
+.search {
+    &-wrap {
+        @include flex;
+        align-items: stretch;
+        min-width: 250px;
+        background-color: #F2F2F2;
+        border-radius: 0.8rem;
+        @include max($res-mobile) {
+            background-color: transparent;
+            border-bottom: 1px solid white;
+            border-radius: 0;
+        }
+    }
+    &-input {
+        @include font-pri;
+        outline: none;
+        border: none;
+        @include fz-16;
+        color: $color-text;
+        flex: 1;
+        height: 4rem;
+        padding: 0 1.2rem;
+        background-color: transparent;
+        @include max($res-mobile) {
+            color: white;
+        }
+        &::-webkit-input-placeholder {
+            color: $color-text;
+            @include max($res-mobile) {
+                color: white;
+            }
+        }
+        &::-moz-input-placeholder {
+            color: $color-text;
+            @include max($res-mobile) {
+                color: white;
+            }
+        }
+    }
+    &-btn {
+        @include mid-flex;
+        flex-shrink: 0;
+        width: 4rem;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+        img {
+            width: 1.6rem;
+            height: 1.6rem;
+            @include max($res-mobile) {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}

@@ -1,0 +1,566 @@
+.cmini {
+    position: absolute;
+    top: calc(100% + 1.2rem);
+    right: 0;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background-color: #F2FBFF;
+    z-index: 2;
+    min-width: 38rem;
+    max-width: 38rem;
+    min-height: 38rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    @include hidden(0, 1rem);
+    @include transitionRe;
+    flex-direction: column;
+
+    @include max($mobile) {
+        right: -3.5em;
+    }
+
+    @include max(400px) {
+        min-width: 30rem;
+        max-width: 30rem;
+        min-height: 30rem;
+    }
+
+    &-main {
+        padding: 2.4rem;
+
+        @include max($mobile) {
+            padding: 1.6rem;
+        }
+    }
+
+    &-head {
+        border-bottom: 1px solid $color-border-01;
+        padding-bottom: 1.6rem;
+
+        .title {
+            color: $color-text;
+            font-weight: 600;
+        }
+    }
+
+    &-body {
+        max-height: 35.5vh;
+        overflow-y: auto;
+        margin-right: -1.2rem;
+        padding-right: 1.2rem;
+
+        &::-webkit-scrollbar {
+            width: 0.3rem;
+            border-radius: 1rem;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $color-pri;
+            border-radius: 1rem;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: $color-pri;
+        }
+    }
+
+    &-wrap {
+        @include flex;
+        align-items: center;
+        padding: 1.6rem 0;
+        border-bottom: 1px solid $color-border-01;
+    }
+
+    &-img {
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        flex-shrink: 0;
+        @include transition(0.2s, ease-in-out);
+        border: 1px solid transparent;
+
+        @include min($res-mobile-min) {
+            &:hover {
+                border: 1px solid $color-second;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-content {
+        margin-left: 1.6rem;
+        flex: 1
+    }
+
+    &-name {
+        color: $color-text;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+        @include lc(1);
+        @include transitionRe;
+
+        @include min($res-mobile-min) {
+            &:hover {
+                color: $color-second
+            }
+        }
+    }
+
+    &-fl {
+        @include flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &-sl {
+        color: $color-text;
+    }
+
+    &-price {
+        color: $color-second;
+        font-weight: 500;
+    }
+
+    &-total {
+        @include flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.6rem 2.4rem;
+        padding-top: 0;
+
+        @include max($mobile) {
+            padding: 0 1.6rem 1.6rem 1.6rem;
+        }
+
+        .title {
+            font-weight: 600;
+        }
+
+        .cmini-price {
+            font-size: 1.8rem;
+        }
+    }
+
+    &-action {
+        &-btn {
+            display: block;
+            padding: 1.2rem;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            background-color: $color-pri;
+            @include transitionRe;
+
+            @include min($res-mobile-min) {
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+
+            @include max($mobile) {
+                padding: 0.8rem;
+            }
+
+            &.second {
+                background-color: $color-second;
+            }
+        }
+    }
+
+    &-no-cart {
+        text-align: center;
+        width: 100%;
+        min-height: inherit;
+        @include mid-flex;
+        flex-direction: column;
+
+        img {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        .text {
+            margin-top: 1.6rem;
+        }
+    }
+}
+
+.c {
+    &.second {
+        .c-head {
+            border: none;
+        }
+
+        .c-row {
+            padding: 0;
+        }
+
+        .c-col {
+            &-first {
+                @include max($res-mobile) {
+                    width: 80%;
+                }
+
+                @include max(768px) {
+                    width: 100%;
+                }
+            }
+
+            &-second {
+                @include max($res-mobile) {
+                    width: 20%;
+                }
+
+                @include max(768px) {
+                    width: 100%;
+                }
+            }
+
+            &-third {
+                @include max($res-mobile) {
+                    width: 30%;
+                }
+
+                @include max(768px) {
+                    width: 100%;
+                }
+            }
+
+            &-four {
+                width: calc(100%*(1/12));
+
+                @include max($res-mobile) {
+                    width: 30%;
+                }
+
+                @include max(768px) {
+                    width: 100%;
+                }
+            }
+
+            &-five {
+                width: calc(100%*(2/12));
+
+                @include max($res-mobile) {
+                    width: 30%;
+                }
+            }
+        }
+
+        .c-item {
+            background-color: #FAFAFA;
+            border: none;
+            padding: 1.2rem;
+            border-radius: 0.8rem;
+
+            &:not(:last-child) {
+                margin-bottom: 1.6rem;
+            }
+        }
+
+        .c-delete {
+            position: absolute;
+            @include posi-vertical;
+            right: 0.5rem;
+
+            @include max($res-mobile) {
+                top: initial;
+                bottom: 0.5rem;
+                right: 1rem;
+            }
+        }
+
+        .c-price {
+            .price {
+                font-size: 1.6rem;
+                color: $color-second;
+
+                &.old {
+                    color: #B3B3B3;
+                }
+            }
+        }
+    }
+
+    .count {
+        @include max(375px) {
+            justify-content: space-between;
+            border: 0.1rem solid #EBEBEB;
+            padding: 0.8rem;
+            border-radius: 0.8rem;
+        }
+
+        &-btn {
+            border: 1px solid #999999;
+
+            @include min($res-mobile-min) {
+                &:hover {
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+    &-item {
+        position: relative;
+    }
+
+    &-row {
+        justify-content: space-between;
+    }
+
+    &-col {
+        &-first {
+            width: calc(100%*(5/12));
+
+            @include max(768px) {
+                width: calc(100%*(9/12));
+            }
+
+            @include max(375px) {
+                width: 100%;
+            }
+        }
+
+        &-second {
+            width: calc(100%*(2/12));
+
+            @include max(768px) {
+                width: calc(100%*(3/12));
+            }
+
+            @include max(375px) {
+                width: 100%;
+            }
+        }
+
+        &-third {
+            width: calc(100%*(2/12));
+
+            @include max(768px) {
+                width: calc(100%*(5/12));
+            }
+
+            @include max(375px) {
+                width: 100%;
+            }
+        }
+
+        &-four {
+            width: calc(100%*(2/12));
+
+            @include max(768px) {
+                width: calc(100%*(5/12));
+            }
+
+            @include max(375px) {
+                width: 90%;
+            }
+        }
+
+        &-five {
+            width: calc(100%*(1/12));
+
+            @include max(768px) {
+                width: calc(100%*(2/12));
+            }
+
+            @include max(375px) {
+                width: 10%;
+            }
+        }
+    }
+
+    &-head {
+        border-bottom: 0.1rem solid #EBEBEB;
+        padding-bottom: 1.6rem;
+
+        .c-col {
+            &-first {
+                @include max(375px) {
+                    width: 50%;
+                }
+            }
+
+            &-second {
+                @include max(768px) {
+                    display: none;
+                    text-align: right;
+                }
+
+                @include max(375px) {
+                    width: 50%;
+                }
+            }
+
+            &-third {
+                @include max(768px) {
+                    display: none;
+                }
+            }
+
+            &-four {
+                @include max(768px) {
+                    display: none;
+                }
+            }
+
+            &-five {
+                @include max(768px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-title {
+        color: #1A1A1A;
+        font-weight: 700
+    }
+
+    &-product {
+        @include flex;
+        align-items: center;
+
+        &-img {
+            width: 7.8rem;
+            height: 7.8rem;
+            border-radius: 0.8rem;
+            overflow: hidden;
+            flex-shrink: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-content {
+            margin-left: 0.8rem;
+
+            .name {
+                color: #1A1A1A;
+                @include lc(3);
+
+                @include max($mobile) {
+                    font-size: 1.4rem;
+                }
+
+                &:hover {
+                    color: $color-second;
+                }
+            }
+        }
+    }
+
+    &-body {
+        .c-item {
+            border-bottom: 0.1rem solid #EBEBEB;
+        }
+
+        .c-row {
+            padding: 1.6rem 0;
+            align-items: center;
+            position: relative;
+        }
+    }
+
+    &-price {
+        width: fit-content;
+        text-align: right;
+
+        @include max(768px) {
+            width: 100%;
+        }
+
+        .price {
+            color: $color-text;
+
+            &.old {
+                font-size: 1.2rem;
+                color: $color-text;
+                text-decoration: line-through;
+            }
+        }
+
+        &-total {
+            color: $color-second;
+        }
+    }
+
+    &-delete {
+        text-align: end;
+        cursor: pointer;
+        display: block;
+
+        @include min($res-mobile-min) {
+            &:hover {
+                i {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        i {
+            font-size: 2.4rem;
+            font-weight: 300;
+            transition: 0.6s ease-in-out;
+            display: inline-block;
+        }
+    }
+
+    &-all {
+        padding: 1.6rem 0;
+        border-bottom: 0.1rem solid #EBEBEB;
+
+        &-wrap {
+            @include flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+            margin-left: auto;
+
+            @include max(768px) {
+                width: 100%;
+            }
+
+            .title {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: $color-text;
+            }
+        }
+    }
+
+    &-price-total-all {
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+
+    .waiting {
+        color: #F2C524;
+    }
+
+    .success {
+        color: #63BD62;
+    }
+
+    .cancle {
+        color: #F57242;
+    }
+}
