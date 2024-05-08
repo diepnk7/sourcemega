@@ -191,24 +191,24 @@
     cursor: pointer;
 }
 
-.orders-table,
-table {
-    .status {
-        font-weight: 700;
+// .orders-table,
+// table {
+//     .status {
+//         font-weight: 700;
 
-        &.waiting {
-            color: #F2C524;
-        }
+//         &.waiting {
+//             color: #F2C524;
+//         }
 
-        &.success {
-            color: $color-third;
-        }
+//         &.success {
+//             color: $color-third;
+//         }
 
-        &.cancle {
-            color: #D31D1D;
-        }
-    }
-}
+//         &.cancle {
+//             color: #D31D1D;
+//         }
+//     }
+// }
 
 .slider {
     position: relative;
@@ -218,49 +218,49 @@ table {
     position: relative;
 }
 
-.head {
-    margin-bottom: 3.2rem;
+// .head {
+//     margin-bottom: 3.2rem;
 
-    &.space {
-        @include flex-wr;
-        gap: 1rem;
-        justify-content: space-between;
-    }
+//     &.space {
+//         @include flex-wr;
+//         gap: 1rem;
+//         justify-content: space-between;
+//     }
 
-    &.center {
-        align-items: center;
-    }
+//     &.center {
+//         align-items: center;
+//     }
 
-    &.end {
-        align-items: flex-end;
-    }
+//     &.end {
+//         align-items: flex-end;
+//     }
 
-    &.start {
-        align-items: flex-start;
-    }
+//     &.start {
+//         align-items: flex-start;
+//     }
 
-    &.mb-center {
-        @include max(700px) {
-            text-align: center;
+//     &.mb-center {
+//         @include max(700px) {
+//             text-align: center;
 
-            .left {
-                width: 100%;
-            }
+//             .left {
+//                 width: 100%;
+//             }
 
-            .right {
-                width: 100%;
-            }
+//             .right {
+//                 width: 100%;
+//             }
 
-            .cdw {
-                justify-content: center;
-            }
+//             .cdw {
+//                 justify-content: center;
+//             }
 
-            .btn {
-                margin: 0 auto;
-            }
-        }
-    }
-}
+//             .btn {
+//                 margin: 0 auto;
+//             }
+//         }
+//     }
+// }
 
 .hv-bd {
     position: relative;
@@ -319,7 +319,7 @@ table {
 }
 
 .wp-block-image {
-    border-radius: 1.2rem;
+    // border-radius: 1.2rem;
 
     img {
         display: block;

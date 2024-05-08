@@ -29,7 +29,7 @@ mixin btn(text, type, classCustom, img)
           else
               a.btn(href="", class=classCustom)
                   span.txt #{text}
-mixin PageNumber 
+mixin pageNumber 
     ul.page-numbers
         li 
             a.prev.page-numbers(href="")
@@ -62,7 +62,7 @@ mixin breadCrumb(arr)
               a.breadcrumb-link(href="") #{arrs.txt}
 mixin pagination(classCustom)
     .swiper-pagination(class=classCustom)
-mixin CountDown(time,customClass)
+mixin countDown(time,customClass)
     .cdw(data-time= time, class= customClass)
       .cdw-list 
           .cdw-item(style="display: none")
@@ -79,13 +79,13 @@ mixin CountDown(time,customClass)
           .cdw-item 
               .cdw-inner 
                   .number.second
-mixin SwiperControl(customClass)
+mixin swiperControl(customClass)
     .swiper-control(class= customClass) 
       .swiper-control-btn.swiper-prev 
           i.far.fa-long-arrow-left
       .swiper-control-btn.swiper-next 
           i.far.fa-long-arrow-right
-mixin Count()
+mixin count()
     .count 
         .count-btn.count-minus 
             i.fas.fa-minus.icon
@@ -94,7 +94,7 @@ mixin Count()
         .count-btn.count-plus 
             i.fas.fa-plus.icon
 mixin img(name)
-  img(src="./assets/images/" + name, alt="")
+  img(src="./assets/images/" + name, loading="lazy", alt="")
 mixin star(per)
   .star
     .star-list
@@ -199,3 +199,4 @@ mixin prodItem(img,tt,des)
             span.info-tt #{tt} 
             i.fa-regular.fa-arrow-up-right
         p.info-des #{des} 
+

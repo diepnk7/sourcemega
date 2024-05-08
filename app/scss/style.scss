@@ -5,7 +5,7 @@
 @import url("../assets/library/swiper/swiper-bundle.min.css");
 @import url("../assets/library/themify-icons/themify-icons.css");
 @import url("../assets/library/select2/select2.min.css");
-@import url("../assets/library/themifi/themify-icons.css");
+// @import url("../assets/library/themifi/themify-icons.css");
 @import url("../assets/library/gallery/lightgallery.min.css");
 @import url("../assets/library/splitting/splitting.css");
 @import url("../assets/library/fancybox/fancybox.css");
@@ -19,7 +19,6 @@
 @import "./core/base";
 @import "./core/flex";
 @import "./core/animation";
-@import "./core/global";
 // Component
 @import "./components/backtotop";
 @import "./components/aos";
@@ -56,11 +55,11 @@
 @import "./layouts/star";
 @import "./layouts/side";
 @import "./layouts/user";
-@import "./layouts/mxh";
+@import "./layouts/social";
 @import "./layouts/cart";
 @import "./layouts/prl";
 // Pages
 @import "./pages/common";
 @import "./pages/home";
-@import "./pages/childpage";
-@import "./pages/about";
+// @import "./pages/childpage";
+// @import "./pages/about";
