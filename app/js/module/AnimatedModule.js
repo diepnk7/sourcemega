@@ -131,4 +131,21 @@ export default function AnimatedModule() {
     }
   }
   scrollProgress();
+
+  
+  // 
+
+  const parallax = document.querySelectorAll('.imgPara')
+  if(parallax && window.innerWidth > 500) {
+    parallax.forEach(parallaxItem => {
+      new Ukiyo(parallaxItem, {
+        scale: 1.5, // 1~2 is recommended
+        speed: 1.5, // 1~2 is recommended
+        willChange: true,
+        wrapperClass: "ukiyo-wrapper",
+        externalRAF: false
+      })
+    })
+    
+  }
 }

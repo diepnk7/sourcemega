@@ -37,8 +37,6 @@
             color: $color-text;
         }
     }
-
-
 }
 
 textarea {
@@ -46,11 +44,11 @@ textarea {
 }
 
 form {
-    .wpcf7-not-valid-tip {
-        color: $color-pri;
-        bottom: .1rem;
-        right: .6rem;
-    }
+    // .wpcf7-not-valid-tip {
+    //     color: $color-pri;
+    //     bottom: .1rem;
+    //     right: .6rem;
+    // }
 
     .btn {
         .wpcf7-spinner {
@@ -66,10 +64,10 @@ form {
 
 
 
-.wpcf7-response-output {
-    text-align: center;
-    color: $color-pri !important;
-}
+// .wpcf7-response-output {
+//     text-align: center;
+//     color: $color-pri !important;
+// }
 
 // .ft-regi-btn {
 //     cursor: pointer;

@@ -1,70 +1,70 @@
-.monaMessageFromAdmin {
-    // transform: scale(0);
-    // opacity: 0;
-    // pointer-events: none;
-    // &.done {
-    //     transform: scale(1);
-    //     opacity: 1;
-    //     pointer-events: visible;
-    // }
-    position: relative;
-    display: none;
+// .monaMessageFromAdmin {
+//     // transform: scale(0);
+//     // opacity: 0;
+//     // pointer-events: none;
+//     // &.done {
+//     //     transform: scale(1);
+//     //     opacity: 1;
+//     //     pointer-events: visible;
+//     // }
+//     position: relative;
+//     display: none;
 
-    .img-inner {
-        text-align: center;
-        min-height: 20rem;
-        padding: 4rem;
-        @include fz-30;
-        @include font-second;
-    }
+//     .img-inner {
+//         text-align: center;
+//         min-height: 20rem;
+//         padding: 4rem;
+//         @include fz-30;
+//         @include font-second;
+//     }
 
-    .bg-pink {
-        display: none;
-    }
+//     .bg-pink {
+//         display: none;
+//     }
 
-    .course-out {
-        &::after {
-            content: '';
-        }
-    }
+//     .course-out {
+//         &::after {
+//             content: '';
+//         }
+//     }
 
-    .course-out-content {
-        display: none;
-    }
+//     .course-out-content {
+//         display: none;
+//     }
 
-    &::after {
-        display: none;
-    }
+//     &::after {
+//         display: none;
+//     }
 
     
-}
-.monaAllButtonRow {
-    align-items: center;
-    margin-bottom: 2rem;
-    gap: 2rem;
-    .lib-self-slider-tt  {
-        width: fit-content
-    }
-    .monaAllButton {
-        width: fit-content;
-        margin-left: auto;
-        .btn {
-            @include max(700px) {
-                height: 4rem;
-                .txt {
-                    padding: 1.6rem 2rem;
-                }
-            }
-        }
-    }
-    @include max(450px) {
-        flex-direction: column;
-        gap: 0;
-        .monaAllButton {
-            margin-right: auto;
-        }
-    }
-}
+// }
+// .monaAllButtonRow {
+//     align-items: center;
+//     margin-bottom: 2rem;
+//     gap: 2rem;
+//     .lib-self-slider-tt  {
+//         width: fit-content
+//     }
+//     .monaAllButton {
+//         width: fit-content;
+//         margin-left: auto;
+//         .btn {
+//             @include max(700px) {
+//                 height: 4rem;
+//                 .txt {
+//                     padding: 1.6rem 2rem;
+//                 }
+//             }
+//         }
+//     }
+//     @include max(450px) {
+//         flex-direction: column;
+//         gap: 0;
+//         .monaAllButton {
+//             margin-right: auto;
+//         }
+//     }
+// }
 
 // .mobile-nav .menu-nav > .menu-list > .menu-item.current_page_item > a, .mobile-nav .menu-nav > .menu-list > .menu-item.current-menu-item > a, .mobile-nav .menu-nav > .menu-list > .menu-item.current_page_parent > a, .mobile-nav .menu-nav > .menu-list > .menu-item.current-menu-parent > a, .mobile-nav .menu-nav > .menu-list > .menu-item.current-post-parent > a {
 //     padding-left: 1.2rem; 

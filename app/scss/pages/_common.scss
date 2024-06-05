@@ -394,126 +394,126 @@
         }
     }
 }
-// list
 
-.prod-list {
-    @include max(1200px) {
-        --cg:1.2rem;
-        --rg:1.2rem;
-    }
-    @include max(700px) {
-        .col {
-            width: 50%;
-        }
-    }
-}
-// item
-.prod-item {
-    height: 100%;
-    .inner {
-        display: flex;
-        flex-direction: column;
-        border: 0.1rem solid #EDEDED;
-        border-radius: 0.4rem;
-        height: 100%;
-        .img {
-            width: 100%;
-            &-inner {
-                @include imgPd(310,384);
-                border-radius: 0.4rem;
-                transition: 0.4s;
-                img {
-                    @include imgContain;
-                }
-            }
-        }
-        .info {
-            padding: 1rem;
-            overflow: hidden;
-            max-height: 7rem;
-            transition: 0.4s;
-            margin-top: auto;
-            &-flex {
-                display: flex;
-                align-items: center;
-                padding-bottom: 0.8rem;
-                position: relative;
-                margin-bottom: 1rem;
-                &::after {
-                    @include pseudo;
-                    width: 0%;
-                    height: 0.2rem;
-                    background: var(--color-pri);
-                    bottom: 0;
-                    left: 0;
-                    transition: 0.4s;
-                }
-            }
-            &-tt {
-                @include fz-20;
-                font-weight: 600;
-                color: var(--color-text);
-                line-height: 1.2;
-                @include lc(2);
-                @include max(850px) {
-                    font-size: 1.6rem;
-                }
-                @include max(700px) {
-                    font-size: 1.4rem;
-                }
-            }
-            i {
-                width: 3.6rem;
-                height: 3.6rem;
-                display: block;
-                flex-shrink: 0;
-                font-size: 2.4rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                @include max(700px) {
-                    width: 2rem;
-                    height: 2rem;
-                    font-size: 1.5rem;
-                }
-            }
-            &-des {
-                @include lc(3);
-                line-height: 1.2;
-                @include max(700px) {
-                    font-size: 1.2rem;
-                }
-            }
-        }
-        @include hover {
-            .img {
-                &-inner {
-                    @include imgPd(211,384);
-                }
-            }
-            .info {
-                max-height: 15rem;
-                &-flex {
-                    &::after {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        @include max(1200px) {
-            .img {
-                &-inner {
-                    @include imgPd(310,384);
-                }
-            }
-            .info {
-                max-height: 15rem;
-                &-flex {
-                    &::after {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
+// // list
+// .prod-list {
+//     @include max(1200px) {
+//         --cg:1.2rem;
+//         --rg:1.2rem;
+//     }
+//     @include max(700px) {
+//         .col {
+//             width: 50%;
+//         }
+//     }
+// }
+// // item
+// .prod-item {
+//     height: 100%;
+//     .inner {
+//         display: flex;
+//         flex-direction: column;
+//         border: 0.1rem solid #EDEDED;
+//         border-radius: 0.4rem;
+//         height: 100%;
+//         .img {
+//             width: 100%;
+//             &-inner {
+//                 @include imgPd(310,384);
+//                 border-radius: 0.4rem;
+//                 transition: 0.4s;
+//                 img {
+//                     @include imgContain;
+//                 }
+//             }
+//         }
+//         .info {
+//             padding: 1rem;
+//             overflow: hidden;
+//             max-height: 7rem;
+//             transition: 0.4s;
+//             margin-top: auto;
+//             &-flex {
+//                 display: flex;
+//                 align-items: center;
+//                 padding-bottom: 0.8rem;
+//                 position: relative;
+//                 margin-bottom: 1rem;
+//                 &::after {
+//                     @include pseudo;
+//                     width: 0%;
+//                     height: 0.2rem;
+//                     background: var(--color-pri);
+//                     bottom: 0;
+//                     left: 0;
+//                     transition: 0.4s;
+//                 }
+//             }
+//             &-tt {
+//                 @include fz-20;
+//                 font-weight: 600;
+//                 color: var(--color-text);
+//                 line-height: 1.2;
+//                 @include lc(2);
+//                 @include max(850px) {
+//                     font-size: 1.6rem;
+//                 }
+//                 @include max(700px) {
+//                     font-size: 1.4rem;
+//                 }
+//             }
+//             i {
+//                 width: 3.6rem;
+//                 height: 3.6rem;
+//                 display: block;
+//                 flex-shrink: 0;
+//                 font-size: 2.4rem;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 @include max(700px) {
+//                     width: 2rem;
+//                     height: 2rem;
+//                     font-size: 1.5rem;
+//                 }
+//             }
+//             &-des {
+//                 @include lc(3);
+//                 line-height: 1.2;
+//                 @include max(700px) {
+//                     font-size: 1.2rem;
+//                 }
+//             }
+//         }
+//         @include hover {
+//             .img {
+//                 &-inner {
+//                     @include imgPd(211,384);
+//                 }
+//             }
+//             .info {
+//                 max-height: 15rem;
+//                 &-flex {
+//                     &::after {
+//                         width: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//         @include max(1200px) {
+//             .img {
+//                 &-inner {
+//                     @include imgPd(310,384);
+//                 }
+//             }
+//             .info {
+//                 max-height: 15rem;
+//                 &-flex {
+//                     &::after {
+//                         width: 100%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

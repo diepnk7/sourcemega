@@ -60,7 +60,7 @@
         filter: brightness(0) invert(1);
     }
 
-    &:hover {
+    @include hover {
         .txt {
             color: var(--color-pri);
         }
@@ -252,7 +252,7 @@
             background-color: $color-pri;
         }
 
-        &:hover {
+        @include hover {
             .txt {
                 color: $color-white;
             }
@@ -293,7 +293,7 @@
     @include fz-16;
     transition: .3s;
 
-    &:hover {
+    @include hover {
         color: var(--color-second);
     }
 

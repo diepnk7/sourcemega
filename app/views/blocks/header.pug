@@ -85,34 +85,27 @@ header.hd
                 a.menu-link(href='')
                   | Liên hệ
           .mobile-content
-            p.titles Mạng xã hội 
-            .social 
-              a(href="").social-link  
-                +img("ic-fb.svg") 
-              a(href="").social-link 
-                +img("ic-twi.svg") 
-              a(href="").social-link 
-                +img("ic-linked.svg") 
-            p.titles Thông Tin
-            .mobile-content-bl
-              .name
-                span.ic
-                  i.fa-solid.fa-phone
-                span.name-txt Hotline:
-              .val
-                | 123456789
-            .mobile-content-bl
-              .name
-                span.ic
-                  i.fa-solid.fa-envelope
-                span.name-txt Mail:
-              .val
-                | themona@gmail.com
-            .mobile-content-bl
-              .name
-                span.ic
-                  i.fa-solid.fa-location-dot
-                span.name-txt Address:
-              .val
-                | mona.media
+            p.mobile-title
+              | Mạng xã hội
+            .social-list
+                a(href="").social-link  
+                  +img("ic-fb.svg") 
+                a(href="").social-link 
+                  +img("ic-linked.svg") 
+                a(href="").social-link 
+                  +img("ic-yt.svg") 
+            p.mobile-title
+              | Thông tin liên hệ
+            .mobile-fl
+              span.fw-6  Địa chỉ:  
+              p.mobile-text.mobile-link
+                | 33 Phan Bá Phiến, P.12, Q. Tân Bình, TP.HCM
+            .mobile-fl
+              span.fw-6 Hotline:  
+              a.mobile-text.mobile-link(href="")
+                | 0983 528 578
+            .mobile-fl
+              span.fw-6 Email:  
+              a.mobile-text.mobile-link(href="")
+                | info@blueplanet.com.vn
 
