@@ -217,4 +217,11 @@ export default function ComponentModule() {
       });
     })
   }
+
+  if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+    var args = ['\n %c Made with ♥ by diepnk7 %c\n', 'color: #fff; background: #e43333; padding:5px 0;', 'background: #131419; padding:5px 0;'];
+    window.console.log.apply(console, args);
+  } else if (window.console) {
+    window.console.log('Made with love ♥ diepnk7');
+  }
 }

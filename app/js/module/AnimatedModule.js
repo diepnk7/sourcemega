@@ -22,6 +22,10 @@ export default function AnimatedModule() {
     scrollAddClass(".txt-spl", "is-inview");
     scrollAddClass(".scroll-item", "is-inview");
     scrollAddClass(".add-class", "is-inview");
+    scrollAddClass(".text-hori", "is-inview");
+    scrollAddClass(".text-verti", "is-inview");
+    scrollAddClass(".text-scale", "is-inview");
+    scrollAddClass(".fx-letter", "is-inview");
 
     $window.on("scroll", function () {
       scrollAddClass(".load-img", "is-inview");
@@ -32,6 +36,7 @@ export default function AnimatedModule() {
       scrollAddClass(".txt-spl", "is-inview");
       scrollAddClass(".add-class", "is-inview");
       scrollAddClass(".scroll-item", "is-inview");
+      scrollAddClass(".fx-letter", "is-inview");
     });
   }
   bindImageAnimations();
@@ -132,11 +137,11 @@ export default function AnimatedModule() {
   }
   scrollProgress();
 
-  
+
   // 
 
   const parallax = document.querySelectorAll('.imgPara')
-  if(parallax && window.innerWidth > 500) {
+  if (parallax && window.innerWidth > 500) {
     parallax.forEach(parallaxItem => {
       new Ukiyo(parallaxItem, {
         scale: 1.5, // 1~2 is recommended
@@ -146,6 +151,6 @@ export default function AnimatedModule() {
         externalRAF: false
       })
     })
-    
+
   }
 }
