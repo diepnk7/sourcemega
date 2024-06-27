@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat';
+    @include font-pri;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
@@ -45,6 +45,7 @@ select {
 button {
     padding: 0;
     background-color: transparent;
+    cursor: pointer;
 }
 
 input,
@@ -62,10 +63,10 @@ textarea {
 
 .container {
     width: 100%;
-    max-width: 123rem;
+    max-width: 124.8rem;
     height: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1.6rem;
 }
 
 .over {

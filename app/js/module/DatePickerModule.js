@@ -85,10 +85,6 @@ export default function DatePickerModule() {
                 }
 
             });
-            openTimePickerInput.setAttribute(
-                "value",
-                `${picker.startDate.format(formatView)} - ${picker.endDate.format(formatView)}`
-            );
             // checkValue();
 
         })

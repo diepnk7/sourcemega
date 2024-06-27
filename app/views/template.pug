@@ -7,13 +7,32 @@ block vars
     -hdClass = ''
 
 block container 
-    +popup("popSearch","srch")
-        .content 
-            form(action="")
-                .content-form 
-                    input(type="text", placeholder="Tìm kiếm")
-                    +btn("Tìm kiếm","button","second")
+    //- +popup("popSearch","srch")
+    //-     .content 
+    //-         form(action="")
+    //-             .content-form 
+    //-                 input(type="text", placeholder="Tìm kiếm")
+    //-                 +btn("Tìm kiếm","button","second")
+
     +banner("Sản phẩm dân dụng",[{txt:"Sản phẩm dân dụng"}],"banner.jpg")
+
+    span.btn.popup-open(data-popup='srch')
+        span.txt Popup Search
+
+    .popup.open(data-popup-id='srch')
+        .popup-overlay
+        .popup-main.popSearch
+            .popup-over
+                .popup-wrapper
+                    .content
+                        form(action)
+                            .content-form
+                                input(type='text' placeholder='Tìm kiếm')
+                                button.btn.second(type='submit')
+                                    span.txt Tìm kiếm
+            .popup-close
+                i.fas.fa-times.icon
+
     .head.t-center
         //- +tts("SẢN PHẨM DÂN DỤNG","Sản phẩm của công ty gồm: máy nước nóng năng lượng mặt trời, điện năng lượng mặt trời, bơm nhiệt, bồn bảo ôn, bồn nước inox,.. và các thiết bị & phụ kiện hỗ trợ khác.")
         .title 

@@ -10,13 +10,13 @@
     color: $color-third;
 }
 
-.c-four {
-    color: $color-four;
-}
+// .c-four {
+//     color: $color-four;
+// }
 
-.c-five {
-    color: $color-five;
-}
+// .c-five {
+//     color: $color-five;
+// }
 
 .c-white {
     color: white;
@@ -46,13 +46,13 @@
     background-color: $color-third;
 }
 
-.bc-four {
-    background-color: $color-four;
-}
+// .bc-four {
+//     background-color: $color-four;
+// }
 
-.bc-five {
-    background-color: $color-five;
-}
+// .bc-five {
+//     background-color: $color-five;
+// }
 
 .over-hd {
     overflow: hidden;
@@ -106,80 +106,92 @@
 
 
 
-.lg-download,
-#lg-actual-size,
-#lg-share {
+// .lg-download,
+// #lg-actual-size,
+// #lg-share {
+//     display: none;
+// }
+
+// .lg-backdrop,
+// .lg-outer {
+//     z-index: 99999;
+// }
+
+// .lg-outer .lg-thumb-item {
+//     border: 0.2rem solid $color-pri;
+//     transition: 0.2s ease;
+
+//     &.active {
+//         border-color: $color-third;
+//     }
+
+//     @include hover {
+//         border-color: $color-third;
+//     }
+// }
+
+// .lg-prev.lg-icon {
+//     &::after {
+//         display: none;
+//     }
+// }
+
+// .lg-next.lg-icon {
+//     &::before {
+//         display: none;
+//     }
+// }
+
+// .lg-prev.lg-icon,
+// .lg-next.lg-icon {
+//     width: 4rem;
+//     height: 4rem;
+
+//     i {
+//         background: $color-pri-ln;
+//         @include txt-ln;
+//     }
+// }
+
+// .lg-outer .lg-thumb-outer {
+//     background-color: #000;
+// }
+
+// .lg-close.lg-icon {
+//     background: $color-pri-ln;
+//     @include txt-ln;
+// }
+
+// .lg-outer .lg-toogle-thumb {
+//     background: $color-pri-ln;
+//     @include txt-ln;
+//     width: 4rem;
+//     height: 4rem;
+// }
+
+// .lg-img-wrap {
+//     border-radius: .8rem;
+// }
+
+// .lg-thumb-item {
+//     border-radius: .8rem;
+// }
+
+// .lg-outer .lg-thumb {
+//     margin: 0 auto -5px;
+// }
+
+// hidden gallery
+.lg-thumb-outer.lg-grab {
     display: none;
 }
 
-.lg-backdrop,
-.lg-outer {
-    z-index: 99999;
+.lg-download, .lg-autoplay-button, .lg-fullscreen, #lg-zoom-in, #lg-zoom-out
+, #lg-actual-size, #lg-share, .lg-flip-ver, .lg-flip-hor, .lg-rotate-left, .lg-rotate-right{
+    display: none;
 }
 
-.lg-outer .lg-thumb-item {
-    border: 0.2rem solid $color-pri;
-    transition: 0.2s ease;
 
-    &.active {
-        border-color: $color-third;
-    }
-
-    @include hover {
-        border-color: $color-third;
-    }
-}
-
-.lg-prev.lg-icon {
-    &::after {
-        display: none;
-    }
-}
-
-.lg-next.lg-icon {
-    &::before {
-        display: none;
-    }
-}
-
-.lg-prev.lg-icon,
-.lg-next.lg-icon {
-    width: 4rem;
-    height: 4rem;
-
-    i {
-        background: $color-pri-ln;
-        @include txt-ln;
-    }
-}
-
-.lg-outer .lg-thumb-outer {
-    background-color: #000;
-}
-
-.lg-close.lg-icon {
-    background: $color-pri-ln;
-    @include txt-ln;
-}
-
-.lg-outer .lg-toogle-thumb {
-    background: $color-pri-ln;
-    @include txt-ln;
-    width: 4rem;
-    height: 4rem;
-}
-
-.lg-img-wrap {
-    border-radius: .8rem;
-}
-
-.lg-thumb-item {
-    border-radius: .8rem;
-}
-
-.lg-outer .lg-thumb {
-    margin: 0 auto -5px;
-}
 
 .tabPanel {
     display: none;
