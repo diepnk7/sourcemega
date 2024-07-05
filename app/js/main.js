@@ -13,6 +13,7 @@ import AnimatedModule from "./module/AnimatedModule.js";
 import TextAniModule from "./module/TextAniModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
 import ComponentModule from "./module/ComponentModule.js";
+import FixedBar from "./module/FixedBar.js";
 // import CountUpModule from "./module/CountUpModule.js";
 // import LoadModule from "./module/LoadModule.js";
 // import SelectCusModule from "./module/SelectCusModule.js";
@@ -33,6 +34,7 @@ import ComponentModule from "./module/ComponentModule.js";
 // import ConfettiModule from "./module/ConfettiModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
+    FixedBar();
     // Animation
     TextAniModule();
     AnimatedModule();

@@ -25,7 +25,6 @@ export default function AnimatedModule() {
     scrollAddClass(".text-hori", "is-inview");
     scrollAddClass(".text-verti", "is-inview");
     scrollAddClass(".text-scale", "is-inview");
-    scrollAddClass(".fx-letter", "is-inview");
 
     $window.on("scroll", function () {
       scrollAddClass(".load-img", "is-inview");
