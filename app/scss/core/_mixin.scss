@@ -1,11 +1,18 @@
-@mixin max($value) {
-    @media screen and (max-width: $value) {
-        @content;
-    }
+@mixin font-pri($name: "Montserrat") {
+    font-family: $name, sans-serif;
 }
 
-@mixin min-max($min, $max) {
-    @media (min-width: $min) and (max-width: $max) {
+@mixin font-second($name: "Montserrat") {
+    font-family: $name, sans-serif;
+}
+
+@mixin font-third($name: "Montserrat") {
+    font-family: $name, sans-serif;
+}
+
+
+@mixin max($value) {
+    @media screen and (max-width: $value) {
         @content;
     }
 }
@@ -16,12 +23,19 @@
     }
 }
 
+@mixin min-max($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
 @mixin mid() {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 @mixin flex() {
     display: flex;
@@ -34,19 +48,36 @@
 
 @mixin flex-st() {
     display: flex;
-    -ms-align-items: stretch;
     align-items: stretch;
-    -webkit-align-items: stretch;
     flex-wrap: wrap;
 }
 
 @mixin mid-flex() {
     display: flex;
-    -ms-align-items: center;
     align-items: center;
-    -webkit-align-items: center;
     justify-content: center;
-    -webkit-justify-content: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@mixin flex-icenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-jcenter {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-jbetween {
+    display: flex;
+    justify-content: space-between;
 }
 
 @mixin flex-col {
@@ -87,6 +118,7 @@
     text-overflow: ellipsis;
 }
 
+
 @mixin imgPd($ver, $hori) {
     display: block;
     padding-top: calc((#{$ver} / #{$hori}) * 100%);
@@ -114,8 +146,20 @@
     object-fit: contain;
 }
 
-@mixin lc($value: 3) {
+@mixin bgImage($position: center, $size: cover, $repeat: no-repeat) {
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position: $position;
+}
+
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin lc($value: 2) {
     display: -webkit-box;
+    text-overflow: ellipsis;
     -webkit-line-clamp: $value;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -175,11 +219,21 @@
     background-size: $size;
 }
 
+// @mixin clear {
+//     &::after {
+//         content: "";
+//         clear: both;
+//         display: table;
+//     }
+// }
+
 @mixin clear {
-    &::after {
+    *zoom: 1;
+
+    &:after {
+        display: block;
         content: "";
         clear: both;
-        display: table;
     }
 }
 
@@ -220,27 +274,18 @@
 
 @mixin hover-scale {
     transform: translate(-50%, -50%) scale(1.05);
-    -webkit-transform: translate(-50%, -50%) scale(1.05);
-    -moz-transform: translate(-50%, -50%) scale(1.05);
-    -o-transform: translate(-50%, -50%) scale(1.05);
 }
 
 @mixin posi-vertical {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
 }
 
 @mixin posi-horizontal {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
 }
 
 @mixin hidden($x: 0, $y: 0) {
@@ -256,14 +301,6 @@
     pointer-events: visible;
     transform: translate(0, 0);
 }
-
-// @mixin hover {
-//     @media (hover: hover) {
-//         &:hover {
-//             @content;
-//         }
-//     }
-// }
 
 @mixin hover-zoom($scale: 1.05) {
     transform: scale($scale);
@@ -353,10 +390,6 @@
 }
 
 @mixin hide-appearance {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
     appearance: none;
 }
 
@@ -389,6 +422,17 @@
     }
 }
 
+@mixin scrollbar {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba($color-pri, 0.7);
+        border-radius: 4px;
+    }
+}
+
 @mixin scroll-bar($size-w: 0.5rem, $size-h: 0.5rem, $br: #f1f1f1, $line: $color-pri) {
     padding-bottom: .5rem;
 
@@ -408,9 +452,10 @@
     }
 }
 
-@mixin pseudo() {
-    content: '';
+@mixin pseudo($z: 0) {
     position: absolute;
+    z-index: $z;
+    content: "";
 }
 
 @mixin hover-global {
@@ -568,17 +613,7 @@
     -o-clip-path: $string;
 }
 
-@mixin font-pri($name: "Montserrat") {
-    font-family: $name, sans-serif;
-}
 
-@mixin font-second($name: "Montserrat") {
-    font-family: $name, sans-serif;
-}
-
-@mixin font-third($name: "Montserrat") {
-    font-family: $name, sans-serif;
-}
 
 @mixin gap($gap, $col) {
     width: calc(100% / $col - ($gap - ($gap / $col)));
@@ -691,4 +726,14 @@
             object-fit: cover;
         }
     }
+}
+
+@mixin autoX {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin mx($size: 0) {
+    margin-right: $size;
+    margin-left: $size;
 }

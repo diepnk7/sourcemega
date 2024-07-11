@@ -15,6 +15,7 @@
         .popup-main {
             opacity: 1;
             visibility: visible;
+
             // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
@@ -47,6 +48,15 @@
 
         @include max(768px) {
             padding: 1.6rem;
+        }
+
+        &-wrapper {
+            overflow: hidden;
+            border-radius: 6px;
+            position: relative;
+            padding: 2rem 0;
+            background: white;
+            border-radius: 1rem;
         }
     }
 
@@ -92,9 +102,9 @@
 
         &:hover {
             .icon {
-                transform: rotate(180deg);
+                // transform: rotate(180deg);
                 transform-origin: left;
-                @include transition(0.4s, ease-in-out);
+                // @include transition(0.4s, ease-in-out);
             }
         }
 

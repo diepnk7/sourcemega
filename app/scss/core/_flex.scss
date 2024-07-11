@@ -1,13 +1,13 @@
 .row {
-    --cg: 2.4rem;
-    --rg: 2.4rem;
+    --cg: 3.2rem;
+    --rg: 3.2rem;
     @include flex-wr;
     margin: 0 calc(var(--cg) / 2 * -1) calc(var(--rg) * -1);
 }
 
 .rows {
-    --cg: 2.4rem;
-    --rg: 2.4rem;
+    --cg: 3.2rem;
+    --rg: 3.2rem;
     margin: 0 calc(var(--cg) / 2 * -1);
 }
 
@@ -58,13 +58,5 @@
 
     &-1 {
         width: calc(1/12 * 100%);
-    }
-
-    &-5i {
-        width: calc(100% / 5);
-    }
-
-    &-4i {
-        width: calc(100% / 4);
     }
 }

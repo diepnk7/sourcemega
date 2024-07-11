@@ -9,11 +9,12 @@ import TabModule from "./module/TabModule.js";
 import HeaderModule from "./module/HeaderModule.js";
 import SideModule from "./module/SideModule.js";
 import CollapseModule from "./module/CollapseModule.js";
-import AnimatedModule from "./module/AnimatedModule.js";
+// import AnimatedModule from "./module/AnimatedModule.js";
 import TextAniModule from "./module/TextAniModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import FixedBar from "./module/FixedBar.js";
+import ScrollAddClass from "./module/ScrollAddClass.js";
 // import CountUpModule from "./module/CountUpModule.js";
 // import LoadModule from "./module/LoadModule.js";
 // import SelectCusModule from "./module/SelectCusModule.js";
@@ -34,10 +35,12 @@ import FixedBar from "./module/FixedBar.js";
 // import ConfettiModule from "./module/ConfettiModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
+    // Scroll
     FixedBar();
+    ScrollAddClass();
     // Animation
     TextAniModule();
-    AnimatedModule();
+    // AnimatedModule();
     AosModule();
     // Tab
     TabModule();

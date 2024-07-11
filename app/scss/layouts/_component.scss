@@ -186,8 +186,17 @@
     display: none;
 }
 
-.lg-download, .lg-autoplay-button, .lg-fullscreen, #lg-zoom-in, #lg-zoom-out
-, #lg-actual-size, #lg-share, .lg-flip-ver, .lg-flip-hor, .lg-rotate-left, .lg-rotate-right{
+.lg-download,
+.lg-autoplay-button,
+.lg-fullscreen,
+#lg-zoom-in,
+#lg-zoom-out,
+#lg-actual-size,
+#lg-share,
+.lg-flip-ver,
+.lg-flip-hor,
+.lg-rotate-left,
+.lg-rotate-right {
     display: none;
 }
 
@@ -470,10 +479,46 @@
     }
 }
 
+.form-checker {
+    input {
+        display: none;
+    }
+
+    .sqr,
+    .circle {
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        background-image: url("../assets/images/check-empty.svg");
+        @include default-background;
+        margin-top: 0.2rem;
+    }
+
+    .circle {
+        background-image: url("../assets/images/radio-empty.svg");
+    }
+
+    input:checked~.sqr {
+        background-image: url("../assets/images/check-fill.svg");
+    }
+
+    input:checked~.circle {
+        background-image: url("../assets/images/radio-fill.svg");
+    }
+
+    display: flex;
+    gap: 1rem;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
 .form {
-    --height:4.4rem;
-    --bdr:0.8rem;
-    --bdcl:var(--color-pri);
+    --height: 4.4rem;
+    --bdr: 0.8rem;
+    --bdcl: var(--color-text);
+
     &-list {
         --cg: 2.4rem;
         --rg: 2.4rem;
@@ -488,7 +533,7 @@
         .text {
             display: block;
             margin-bottom: 1rem;
-            color: var(--color-pri);
+            color: var(--color-text);
             font-weight: 500;
 
             .red {
@@ -512,7 +557,7 @@
 
         input,
         textarea {
-            border: 0.1rem solid var(--color-pri);
+            border: 0.1rem solid var(--color-text);
             border-radius: 0.8rem;
             outline: none;
             padding: 1.3rem 2rem;

@@ -1,44 +1,50 @@
 export default function AnimatedModule() {
-  let $window = $(window);
+  // let $window = $(window);
 
-  function scrollAddClass(el, className) {
-    $(el).each(function () {
-      let el = this;
-      if (
-        $(el).offset().top <
-        $window.scrollTop() + ($window.height() / 10) * 8
-      ) {
-        $(el).addClass(className);
-      }
-    });
-  }
+  // function scrollAddClass(el, className) {
+  //   $(el).each(function () {
+  //     let el = this;
+  //     if (
+  //       $(el).offset().top <
+  //       $window.scrollTop() + ($window.height() / 10) * 8
+  //     ) {
+  //       $(el).addClass(className);
+  //     }
+  //     else {
+  //       $(el).removeClass(className);
+  //     }
+  //   });
+  // }
 
-  function bindImageAnimations() {
-    scrollAddClass(".load-img", "is-inview");
-    scrollAddClass(".load-img-second", "is-isview");
-    scrollAddClass(".load-img-third", "is-inview");
-    scrollAddClass(".txt-focus", "is-inview");
-    scrollAddClass(".txt-animated", "is-inview");
-    scrollAddClass(".txt-spl", "is-inview");
-    scrollAddClass(".scroll-item", "is-inview");
-    scrollAddClass(".add-class", "is-inview");
-    scrollAddClass(".text-hori", "is-inview");
-    scrollAddClass(".text-verti", "is-inview");
-    scrollAddClass(".text-scale", "is-inview");
+  // function bindImageAnimations() {
+  //   // scrollAddClass(".load-img", "inview");
+  //   // scrollAddClass(".load-img-second", "inview");
+  //   // scrollAddClass(".load-img-third", "inview");
+  //   // scrollAddClass(".txt-focus", "inview");
+  //   // scrollAddClass(".txt-animated", "inview");
+  //   // scrollAddClass(".txt-spl", "inview");
+  //   // scrollAddClass(".scroll-item", "inview");
+  //   // scrollAddClass(".add-class", "inview");
+  //   // scrollAddClass(".text-hori", "inview");
+  //   // scrollAddClass(".text-verti", "inview");
+  //   // scrollAddClass(".text-scale", "inview");
 
-    $window.on("scroll", function () {
-      scrollAddClass(".load-img", "is-inview");
-      scrollAddClass(".load-img-second", "is-inview");
-      scrollAddClass(".load-img-third", "is-inview");
-      scrollAddClass(".txt-focus", "is-inview");
-      scrollAddClass(".txt-animated", "is-inview");
-      scrollAddClass(".txt-spl", "is-inview");
-      scrollAddClass(".add-class", "is-inview");
-      scrollAddClass(".scroll-item", "is-inview");
-      scrollAddClass(".fx-letter", "is-inview");
-    });
-  }
-  bindImageAnimations();
+  //   $window.on("scroll", function () {
+  //     // scrollAddClass(".load-img", "inview");
+  //     // scrollAddClass(".load-img-second", "inview");
+  //     // scrollAddClass(".load-img-third", "inview");
+  //     // scrollAddClass(".txt-focus", "inview");
+  //     // scrollAddClass(".txt-animated", "inview");
+  //     // scrollAddClass(".txt-spl", "inview");
+  //     // scrollAddClass(".scroll-item", "inview");
+  //     // scrollAddClass(".add-class", "inview");
+  //     // scrollAddClass(".text-hori", "inview");
+  //     // scrollAddClass(".text-verti", "inview");
+  //     // scrollAddClass(".text-scale", "inview");
+  //     // scrollAddClass(".fx-letter", "inview");
+  //   });
+  // }
+  // bindImageAnimations();
 
   let moveItems = document.querySelectorAll(".move-item");
   let height = window.innerHeight;

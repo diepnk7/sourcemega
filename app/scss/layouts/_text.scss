@@ -31,7 +31,7 @@
 //             clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 //         }
 
-//         &.is-inview {
+//         &.inview {
 //             &::after {
 //                 animation: laRight 1s ease-in-out .3s forwards;
 //             }
