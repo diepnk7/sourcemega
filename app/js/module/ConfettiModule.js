@@ -1,13 +1,24 @@
 export default function ConfettiModule() {
-    
 
-    // window.onload = function () {
-    //     Confetti();
+    const selectTestLevel = document.querySelector('.tl')
+    if (selectTestLevel) {
+        function Confetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
 
-    //     //   window.resizeWindow = function() {
-    //     //     Confetti();
-    //     //   };
+        window.onload = function () {
 
-    //     //   window.addEventListener('resize', resizeWindow, false);
-    // }
+            Confetti();
+
+            window.resizeWindow = function () {
+                Confetti();
+            };
+
+            window.addEventListener('resize', resizeWindow, false);
+        }
+    }
 }   

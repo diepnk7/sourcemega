@@ -110,7 +110,7 @@ mixin star(per)
         i.fas.fa-star
         i.fas.fa-star
         i.fas.fa-star        
-mixin Rate()
+mixin rate()
   .rating
       label.stars
         input.star-item(type='radio', name='name', hidden='')
@@ -135,14 +135,23 @@ mixin navigation(classCustom)
     .swiper-control-btn.swiper-next
       i.fa-solid.fa-chevron-right
 //- popup
+//- mixin popup(classCustom=classCustom, dataId=dataId)
+//-   .popup(data-popup-id=dataId)
+//-     .popup-overlay
+//-     .popup-main(class=classCustom)
+//-       .popup-main-wrapper
+//-         .popup-over
+//-           .popup-wrapper
+//-             block
+//-       .popup-close
+//-         i.fas.fa-times.icon
 mixin popup(classCustom=classCustom, dataId=dataId)
   .popup(data-popup-id=dataId)
     .popup-overlay
     .popup-main(class=classCustom)
-      .popup-main-wrapper
-        .popup-over
-          .popup-wrapper
-            block
+      .popup-over
+        .popup-wrapper
+          block
       .popup-close
         i.fas.fa-times.icon
 //- titles

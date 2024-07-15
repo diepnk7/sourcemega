@@ -1,3 +1,220 @@
+// .popup {
+//     position: fixed;
+//     @include full;
+//     z-index: 999;
+//     visibility: hidden;
+
+//     &.open {
+//         visibility: visible;
+
+//         .popup-overlay {
+//             opacity: 1;
+//             visibility: visible;
+//         }
+
+//         .popup-main {
+//             opacity: 1;
+//             visibility: visible;
+//             @include transition(.3s, ease-in-out, .1s);
+
+//             // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+//             // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+//         }
+//     }
+
+//     &-overlay {
+//         position: absolute;
+//         background-color: rgba(7, 7, 7, 0.6);
+//         @include full;
+//         z-index: 1;
+//         @include transitionRe;
+//         opacity: 0;
+//         visibility: hidden;
+//     }
+
+//     &-main {
+//         @include mid;
+//         z-index: 2;
+//         width: 80rem;
+//         max-height: 90vh;
+//         max-width: 95%;
+//         @include transitionRe;
+//         visibility: hidden;
+//         position: relative;
+//         background-color: $color-white;
+//         padding: 2rem;
+//         // clip-path: polygon();
+//         // -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+//         border: 0.1rem solid #3C3A3A;
+
+//         @include max(768px) {
+//             padding: 1.6rem;
+//         }
+
+//         &-wrapper {
+//             overflow: hidden;
+//             border-radius: 6px;
+//             position: relative;
+//             padding: 2rem 0;
+//             background: white;
+//             border-radius: 1rem;
+//         }
+//     }
+
+//     &-over {
+//         overflow-y: auto;
+//         max-height: 80vh;
+//         padding: 0.1rem 0;
+//         margin-right: -1rem;
+//         padding-right: 1rem;
+//     }
+
+//     &-wrapper {
+//         width: 100%;
+//         min-height: 30vh;
+//         position: relative;
+//     }
+
+//     &-title {
+//         @include fz-24;
+//         font-weight: 700;
+//         text-transform: uppercase;
+//         text-align: center;
+//         margin-bottom: 1.6rem;
+//     }
+
+//     &-close {
+//         position: absolute;
+//         top: 2rem;
+//         right: 2rem;
+//         cursor: pointer;
+//         // transition: 0.3s ease-in-out;
+//         // @include transition(0.4s, ease-in-out);
+//         width: 3rem;
+//         height: 3rem;
+//         @include mid-flex;
+//         z-index: 100;
+
+
+//         &:hover {
+//             .icon {
+//                 transform: rotate(360deg);
+//                 // transform-origin: left;
+//                 @include transition(0.6s, ease-in-out);
+//             }
+//         }
+
+//         .icon {
+//             color: $color-black;
+//             font-weight: 400;
+//             font-size: 2rem;
+//             // @include transition(0.4s, ease-in-out);
+//         }
+
+//     }
+
+
+//     // 
+//     .popSearch {
+//         width: 50rem;
+
+//         .popup-over {
+//             min-height: unset;
+//         }
+
+//         .popup-main {
+//             .popup-close {
+//                 transition: unset;
+
+//                 .icon {
+//                     transition: unset;
+//                 }
+//             }
+//         }
+
+//         .popup-wrapper {
+//             min-height: unset;
+//             padding: 0rem;
+//             padding-top: 3rem;
+//         }
+
+//         .content {
+//             &-form {
+//                 display: flex;
+//                 border: 0.1rem solid var(--color-pri);
+//                 padding: 0.5rem;
+//                 border-radius: 1rem;
+//                 margin: auto;
+//                 max-width: 50rem;
+
+//                 input {
+//                     border: none;
+//                     outline: none;
+//                     background: transparent;
+//                     width: 100%;
+//                     padding: 0 2rem;
+//                     font-size: 1.6rem;
+//                 }
+
+//                 button {
+//                     flex-shrink: 0;
+//                     height: 4rem;
+//                     transition: unset;
+//                 }
+//             }
+//         }
+//     }
+
+//     .popWish {
+//         .popup-over {
+//             min-height: unset;
+//         }
+
+//         .popup-wrapper {
+//             min-height: unset;
+//             padding: 2rem;
+//             padding-top: 3rem;
+
+//             @include max(370px) {
+//                 padding: 3rem 0rem 0rem 0rem;
+//             }
+//         }
+
+//         .wish {
+//             &-form {
+//                 display: flex;
+//                 flex-direction: column;
+//                 gap: 0.5rem;
+
+//                 input {
+//                     width: 100%;
+//                     padding: 1rem;
+//                     border: 0.1rem solid var(--color-pri);
+//                     border-radius: 1rem;
+//                     font-size: 1.6rem;
+//                     color: var(--color-pri);
+//                 }
+//             }
+
+//             &-bot {
+//                 display: flex;
+//                 gap: 1rem;
+//             }
+
+//             &-tt {
+//                 font-size: 2.4rem;
+//                 font-weight: 500;
+//                 @include font-second;
+//             }
+
+//             &-note {
+//                 font-size: 1rem;
+//                 font-weight: 300;
+//             }
+//         }
+//     }
+// }
+
 .popup {
     position: fixed;
     @include full;
@@ -13,65 +230,57 @@
         }
 
         .popup-main {
-            opacity: 1;
             visibility: visible;
-
-            // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
     }
 
     &-overlay {
         position: absolute;
-        background-color: rgba(7, 7, 7, 0.6);
+        background-color: rgba($color: $color-black, $alpha: 0.8);
         @include full;
         z-index: 1;
         @include transitionRe;
         opacity: 0;
         visibility: hidden;
+        // backdrop-filter: blur(0.3rem)
     }
 
     &-main {
         @include mid;
         z-index: 2;
-        width: 80rem;
+        width: 90rem;
         max-height: 90vh;
         max-width: 95%;
         @include transitionRe;
         visibility: hidden;
         position: relative;
+        border-radius: 0.4rem;
         background-color: $color-white;
-        padding: 2rem;
-        // clip-path: polygon();
-        // -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        border: 0.1rem solid #3C3A3A;
+        padding: 2.4rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
-        @include max(768px) {
-            padding: 1.6rem;
+        &.med {
+            width: 90rem;
         }
 
-        &-wrapper {
-            overflow: hidden;
-            border-radius: 6px;
-            position: relative;
-            padding: 2rem 0;
-            background: white;
-            border-radius: 1rem;
+        &.small {
+            width: 80rem;
         }
     }
 
     &-over {
-        overflow-y: auto;
+        overflow: hidden auto;
         max-height: 80vh;
-        padding: 0.1rem 0;
-        margin-right: -1rem;
-        padding-right: 1rem;
     }
 
     &-wrapper {
         width: 100%;
         min-height: 30vh;
         position: relative;
+        border-radius: 6px;
+        @include mid-flex;
     }
 
     &-title {
@@ -87,29 +296,29 @@
         top: 2rem;
         right: 2rem;
         cursor: pointer;
-        // transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
         width: 3rem;
         height: 3rem;
         @include mid-flex;
         z-index: 100;
 
-        .icon {
-            color: $color-black;
-            font-weight: 400;
-            font-size: 2rem;
-            // @include transition(0.6s, ease-in-out);
-        }
-
         &:hover {
             .icon {
-                // transform: rotate(180deg);
-                transform-origin: left;
-                // @include transition(0.4s, ease-in-out);
+                transform: rotate(180deg);
             }
         }
 
-    }
+        .icon {
+            color: $color-black;
+            font-weight: 300;
+            font-size: 2.4rem;
+            @include transition(0.6s, ease-in-out);
 
+            @include max(800px) {
+                @include fz-16;
+            }
+        }
+    }
 
     // 
     .popSearch {

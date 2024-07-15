@@ -20,7 +20,7 @@ const options = {
     all: "app/views/**/*.pug",
     dest: "template",
   },
-  styles: {
+  styles: { 
     src: "app/scss/**/*.scss",
     dest: "template/css",
   },

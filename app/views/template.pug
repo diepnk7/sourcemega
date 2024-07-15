@@ -22,17 +22,21 @@ block container
     .popup(data-popup-id='srch')
         .popup-overlay
         .popup-main.popSearch
-            .popup-main-wrapper
-                .popup-over
-                    .popup-wrapper
-                        .content
-                            form(action)
-                                .content-form
-                                    input(type='text' placeholder='Tìm kiếm')
-                                    button.btn.second(type='submit')
-                                        span.txt Tìm kiếm
+            .popup-over
+                .popup-wrapper
+                    .content
+                        +img("banner.jpg")
+                        form(action)
+                            .content-form
+                                input(type='text' placeholder='Tìm kiếm')
+                                button.btn.second(type='submit')
+                                    span.txt Tìm kiếm
+        
             .popup-close
                 i.fas.fa-times.icon
+
+    +popup("open", "")
+        .content
 
     .head.t-center
         //- +tts("SẢN PHẨM DÂN DỤNG","Sản phẩm của công ty gồm: máy nước nóng năng lượng mặt trời, điện năng lượng mặt trời, bơm nhiệt, bồn bảo ôn, bồn nước inox,.. và các thiết bị & phụ kiện hỗ trợ khác.")
