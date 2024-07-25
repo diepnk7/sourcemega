@@ -6,10 +6,25 @@ export default function PopupModule() {
     if (popupClose) {
         popupClose.forEach((item) => {
             item.addEventListener("click", () => {
-                popup.forEach((item) => {
-                    item.classList.remove("open");
-                    body.classList.remove("no-scroll");
-                });
+                // popup.forEach((item) => {
+                //     item.classList.remove("open");
+                //     body.classList.remove("no-scroll");
+                // });
+
+                // make it close closest popup clicked 
+                const parentPopup = item.closest(".popup");
+                if (parentPopup && parentPopup.classList.contains("open")) {
+                    parentPopup.classList.remove("open");
+                    if (!document.querySelector(".popup.open")) {
+                        body.classList.remove("no-scroll");
+                    }
+                }
+            });
+        });
+    }
+    if (popupClose) {
+        popupClose.forEach((item) => {
+            item.addEventListener("click", () => {
             });
         });
     }
